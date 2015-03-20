@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang='zh-TW'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:title" content="台灣水庫水位" />
+    <meta property="og:site_name" content="台灣水庫水位" />
+    <title>台灣水庫水位</title>
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="liquidFillGauge.js" language="JavaScript"></script>
+    <script src="index.js" language="JavaScript"></script>
+    <link rel=stylesheet type="text/css" href="style.css">
+</head>
+<body>
+  <h2>台灣水庫水位(每日更新)</h2>資料來源:<a href="http://www.wra.gov.tw/">經濟部水利署</a>
+  {{#each reservoirs}}
+  <div class="reservoir">
+    <span class="name"><h4>{{title}}</h4></span>
+    <svg id="{{id}}" width="100%" height="250"></svg>
+  </div>
+   {{/each}}
+</body>
+</html>

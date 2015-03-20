@@ -1,0 +1,21 @@
+{
+    "layout": "./index.hbs",
+    "filename": "index.html",
+    "data": {
+        "reservoirs": [
+            {"title": "翡翠水庫", "id": "reservoir1"},
+            {"title": "石門水庫", "id": "reservoir2"},
+            {"title": "永和山水庫", "id": "reservoir3"},
+            {"title": "明德水庫", "id": "reservoir4"},
+            {"title": "鯉魚潭水庫", "id": "reservoir5"},
+            {"title": "德基水庫", "id": "reservoir6"},
+            {"title": "日月潭水庫", "id": "reservoir7"},
+            {"title": "仁義潭水庫", "id": "reservoir8"},
+            {"title": "曾文水庫", "id": "reservoir9"},
+            {"title": "烏山頭水庫", "id": "reservoir10"},
+            {"title": "南化水庫", "id": "reservoir11"},
+            {"title": "阿公店水庫", "id": "reservoir12"},
+            {"title": "牡丹水庫", "id": "reservoir13"}
+        ]
+    }
+}
