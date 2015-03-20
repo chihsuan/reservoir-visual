@@ -3,19 +3,19 @@
     "filename": "index.html",
     "data": {
         "reservoirs": [
-            {"title": "翡翠水庫", "id": "reservoir1"},
-            {"title": "石門水庫", "id": "reservoir2"},
-            {"title": "永和山水庫", "id": "reservoir3"},
-            {"title": "明德水庫", "id": "reservoir4"},
-            {"title": "鯉魚潭水庫", "id": "reservoir5"},
-            {"title": "德基水庫", "id": "reservoir6"},
-            {"title": "日月潭水庫", "id": "reservoir7"},
-            {"title": "仁義潭水庫", "id": "reservoir8"},
-            {"title": "曾文水庫", "id": "reservoir9"},
-            {"title": "烏山頭水庫", "id": "reservoir10"},
-            {"title": "南化水庫", "id": "reservoir11"},
-            {"title": "阿公店水庫", "id": "reservoir12"},
-            {"title": "牡丹水庫", "id": "reservoir13"}
+            {"title": "翡翠水庫(台北、新北)", "id": "reservoir1"},
+            {"title": "石門水庫(新北、桃園、新竹)", "id": "reservoir2"},
+            {"title": "永和山水庫(新竹)", "id": "reservoir3"},
+            {"title": "明德水庫(苗栗)", "id": "reservoir4"},
+            {"title": "鯉魚潭水庫(苗栗、台中)", "id": "reservoir5"},
+            {"title": "德基水庫(台中)", "id": "reservoir6"},
+            {"title": "日月潭水庫(南投)", "id": "reservoir7"},
+            {"title": "仁義潭水庫(嘉義)", "id": "reservoir8"},
+            {"title": "曾文水庫(嘉義、台南)", "id": "reservoir9"},
+            {"title": "烏山頭水庫(台南)", "id": "reservoir10"},
+            {"title": "南化水庫(台南、高雄)", "id": "reservoir11"},
+            {"title": "阿公店水庫(高雄)", "id": "reservoir12"},
+            {"title": "牡丹水庫(屏東)", "id": "reservoir13"}
         ]
     }
 }
