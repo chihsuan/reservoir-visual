@@ -1,6 +1,6 @@
 (function() {
   
-  d3.json("data.json", function(error, data) {
+  d3.json("../data/data.json", function(error, data) {
     configs = {};
 
     for (id in data) {
@@ -18,16 +18,16 @@
 
     function setColor(config, percentage) {
       if (percentage < 25) {
-        config.circleColor = "#00000";
-        config.textColor = "#00000";
-        config.waveTextColor = "#00000";
-        config.waveColor = "#00000"; 
-      }
-      else if (percentage < 50) {
         config.circleColor = "#FF7777";
         config.textColor = "#FF4444";
         config.waveTextColor = "#FFAAAA";
         config.waveColor = "#FFDDDD"; 
+      }
+      else if (percentage < 50) {
+        config.circleColor = "rgb(255, 160, 119)";
+        config.textColor = "rgb(255, 160, 119)";
+        config.waveTextColor = "rgb(255, 160, 119)";
+        config.waveColor = "rgba(245, 151, 111, 0.48)"; 
       }
     }
 
