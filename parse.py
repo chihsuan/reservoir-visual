@@ -1,8 +1,11 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 import json
+import os
 import urllib2
 from bs4 import BeautifulSoup
+base_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(base_dir)
 
 def read_json(file_name):
     with open(file_name, 'r') as input_file:
@@ -22,4 +25,4 @@ for page, url in pages.iteritems():
     percentage = td.string[:-1]
     data[page] = percentage
 
-write_json('data.json', data)
+write_json('data/data.json', data)
