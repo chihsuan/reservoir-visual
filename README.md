@@ -2,7 +2,7 @@
 
 ## Develop
 
-Using [canner](http://canner.github.io/canner/) to generate HTML files 
+Using [canner](https://github.com/Canner/canner) to generate HTML files 
 
 Install canner
 
