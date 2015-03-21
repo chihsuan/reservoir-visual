@@ -5,7 +5,7 @@
         "reservoirs": [
             {"title": "翡翠水庫(台北、新北)", "id": "reservoir1"},
             {"title": "石門水庫(新北、桃園、新竹)", "id": "reservoir2"},
-            {"title": "永和山水庫(新竹)", "id": "reservoir3"},
+            {"title": "永和山水庫(新竹、苗栗)", "id": "reservoir3"},
             {"title": "明德水庫(苗栗)", "id": "reservoir4"},
             {"title": "鯉魚潭水庫(苗栗、台中)", "id": "reservoir5"},
             {"title": "德基水庫(台中)", "id": "reservoir6"},
