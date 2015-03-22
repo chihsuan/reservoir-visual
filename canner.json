@@ -1,21 +1,112 @@
 {
-    "layout": "./index.hbs",
-    "filename": "index.html",
+    "layout": "./index.hbs", 
     "data": {
         "reservoirs": [
-            {"title": "翡翠水庫(台北、新北)", "id": "reservoir1"},
-            {"title": "石門水庫(新北、桃園、新竹)", "id": "reservoir2"},
-            {"title": "永和山水庫(新竹、苗栗)", "id": "reservoir3"},
-            {"title": "明德水庫(苗栗)", "id": "reservoir4"},
-            {"title": "鯉魚潭水庫(苗栗、台中)", "id": "reservoir5"},
-            {"title": "德基水庫(台中)", "id": "reservoir6"},
-            {"title": "日月潭水庫(南投)", "id": "reservoir7"},
-            {"title": "仁義潭水庫(嘉義)", "id": "reservoir8"},
-            {"title": "曾文水庫(嘉義、台南)", "id": "reservoir9"},
-            {"title": "烏山頭水庫(台南)", "id": "reservoir10"},
-            {"title": "南化水庫(台南、高雄)", "id": "reservoir11"},
-            {"title": "阿公店水庫(高雄)", "id": "reservoir12"},
-            {"title": "牡丹水庫(屏東)", "id": "reservoir13"}
+            {
+                "name": "\u7fe1\u7fe0\u6c34\u5eab", 
+                "title": "\u7fe1\u7fe0\u6c34\u5eab(\u53f0\u5317\u3001\u65b0\u5317)", 
+                "percentage": "79.90", 
+                "volumn": "26806.24", 
+                "updateAt": "2015-03-22 14:00", 
+                "id": "reservoir1"
+            }, 
+            {
+                "name": "\u77f3\u9580\u6c34\u5eab", 
+                "title": "\u77f3\u9580\u6c34\u5eab(\u65b0\u5317\u3001\u6843\u5712\u3001\u65b0\u7af9)", 
+                "percentage": "20.53", 
+                "volumn": "4131.99", 
+                "updateAt": "2015-03-22 14:00", 
+                "id": "reservoir2"
+            }, 
+            {
+                "name": "\u6c38\u548c\u5c71\u6c34\u5eab", 
+                "title": "\u6c38\u548c\u5c71\u6c34\u5eab(\u65b0\u7af9\u3001\u82d7\u6817)", 
+                "percentage": "24.63", 
+                "volumn": "691.908", 
+                "updateAt": "2015-03-22 14:00", 
+                "id": "reservoir3"
+            }, 
+            {
+                "name": "\u660e\u5fb7\u6c34\u5eab", 
+                "title": "\u660e\u5fb7\u6c34\u5eab(\u82d7\u6817)", 
+                "percentage": "20.78", 
+                "volumn": "265.2", 
+                "updateAt": "2015-03-20 07:00", 
+                "id": "reservoir4"
+            }, 
+            {
+                "name": "\u9bc9\u9b5a\u6f6d\u6c34\u5eab", 
+                "title": "\u9bc9\u9b5a\u6f6d\u6c34\u5eab(\u82d7\u6817\u3001\u53f0\u4e2d)", 
+                "percentage": "29.69", 
+                "volumn": "3428.54", 
+                "updateAt": "2015-03-22 14:00", 
+                "id": "reservoir5"
+            }, 
+            {
+                "name": "\u5fb7\u57fa\u6c34\u5eab", 
+                "title": "\u5fb7\u57fa\u6c34\u5eab(\u53f0\u4e2d)", 
+                "percentage": "47.15", 
+                "volumn": "7071.84", 
+                "updateAt": "2015-03-22 07:00", 
+                "id": "reservoir6"
+            }, 
+            {
+                "name": "\u65e5\u6708\u6f6d\u6c34\u5eab", 
+                "title": "\u65e5\u6708\u6f6d\u6c34\u5eab(\u5357\u6295)", 
+                "percentage": "72.66", 
+                "volumn": "9536.5", 
+                "updateAt": "2015-03-22 07:00", 
+                "id": "reservoir7"
+            }, 
+            {
+                "name": "\u4ec1\u7fa9\u6f6d\u6c34\u5eab", 
+                "title": "\u4ec1\u7fa9\u6f6d\u6c34\u5eab(\u5609\u7fa9)", 
+                "percentage": "29.93", 
+                "volumn": "772.07", 
+                "updateAt": "2015-03-22 08:00", 
+                "id": "reservoir8"
+            }, 
+            {
+                "name": "\u66fe\u6587\u6c34\u5eab", 
+                "title": "\u66fe\u6587\u6c34\u5eab(\u5609\u7fa9\u3001\u53f0\u5357)", 
+                "percentage": "25.26", 
+                "volumn": "11954", 
+                "updateAt": "2015-03-22 09:00", 
+                "id": "reservoir9"
+            }, 
+            {
+                "name": "\u70cf\u5c71\u982d\u6c34\u5eab", 
+                "title": "\u70cf\u5c71\u982d\u6c34\u5eab(\u53f0\u5357)", 
+                "percentage": "68.93", 
+                "volumn": "5502", 
+                "updateAt": "2015-03-20 07:00", 
+                "id": "reservoir10"
+            }, 
+            {
+                "name": "\u5357\u5316\u6c34\u5eab", 
+                "title": "\u5357\u5316\u6c34\u5eab(\u53f0\u5357\u3001\u9ad8\u96c4)", 
+                "percentage": "33.80", 
+                "volumn": "3309.8", 
+                "updateAt": "2015-03-22 07:00", 
+                "id": "reservoir11"
+            }, 
+            {
+                "name": "\u963f\u516c\u5e97\u6c34\u5eab", 
+                "title": "\u963f\u516c\u5e97\u6c34\u5eab(\u9ad8\u96c4)", 
+                "percentage": "49.98", 
+                "volumn": "823.056848", 
+                "updateAt": "2015-03-22 09:00", 
+                "id": "reservoir12"
+            }, 
+            {
+                "name": "\u7261\u4e39\u6c34\u5eab", 
+                "title": "\u7261\u4e39\u6c34\u5eab(\u5c4f\u6771)", 
+                "percentage": "41.42", 
+                "volumn": "1095.02", 
+                "updateAt": "2015-03-22 09:00", 
+                "id": "reservoir13"
+            }
         ]
-    }
+    }, 
+    "filename": "index.html"
 }
