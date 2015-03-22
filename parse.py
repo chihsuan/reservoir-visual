@@ -24,7 +24,7 @@ for page, url in pages.iteritems():
     print soup.title
     td = soup.select(".DataTable3 tr td")
     name = soup.title.text.split("\r\n")[0]
-    percentage = td[4].string[:-1]
+    percentage = td[4].string[:-2]
     volumn = td[3].string
     update_at = td[0].string
     data[page] = {"name": name, "updateAt": update_at, "volumn": volumn, "percentage": percentage}
