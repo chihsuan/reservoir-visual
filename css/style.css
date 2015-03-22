@@ -1,5 +1,10 @@
 html {
     background: #eee;
+    font-family: 'Noto Sans', 'sans-serif', 'Microsoft Jhenghei'; 
+}
+body {
+    margin: auto;
+    width: 90%;
 }
 
 .liquidFillGaugeText { 
@@ -7,9 +12,9 @@ html {
 }
 
 .reservoir {
-  width: 20%;
-  float: left;
-  padding: 10px;
-  min-width: 250px
+    width: 20%;
+    float: left;
+    padding: 10px;
+    min-width: 250px
 }
 
