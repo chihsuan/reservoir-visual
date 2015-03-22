@@ -5,12 +5,11 @@ html {
 body {
     margin: auto;
     width: 90%;
+    margin-top: 30px;
 }
-
 .liquidFillGaugeText { 
     font-family: Helvetica; font-weight: bold; 
 }
-
 .reservoir {
     width: 20%;
     float: left;
