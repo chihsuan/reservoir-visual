@@ -10,7 +10,7 @@ Install canner
 sudo npm install -g canner
 ```
 
-after install docgr, if you want to generate html files, just type.
+after install canner, if you want to generate html files, just type.
 
 ```
 canner build
