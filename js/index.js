@@ -7,6 +7,7 @@
        var percentage = data[id]['percentage'];
        var number = parseFloat(data[id]['percentage']);
        var updateAt = data[id]['updateAt'];
+       var volumn = data[id]['volumn'];
        configs[id] = liquidFillGaugeDefaultSettings();
        configs[id].waveAnimate = true;
        configs[id].waveAnimateTime = setAnimateTime(number);
@@ -14,7 +15,8 @@
        configs[id].waveHeight = 0.05;
        configs[id].waveCount = setWavaCount(number);
        setColor(configs[id], number);
-       $('#'+id).siblings('.updateAt').html(updateAt);
+       $('#'+id).siblings('.updateAt').html('更新時間：'+updateAt);
+       $('#'+id).siblings('.volumn').children('h6').text(volumn+'萬立方公尺');
        loadLiquidFillGauge(id, percentage, configs[id]);
     }
 
