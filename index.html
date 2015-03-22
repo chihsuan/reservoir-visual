@@ -2,9 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta property="og:title" content="台灣水庫蓄有效蓄水量">
-    <meta property="og:site_name" content="台灣水庫有效蓄水量">
-    <title>台灣水庫有效蓄水量</title>
+    <meta property="og:title" content="台灣水庫蓄水量">
+    <meta property="og:site_name" content="台灣水庫蓄水量">
+    <title>台灣水庫蓄水量</title>
     <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/liquidFillGauge.js" language="JavaScript"></script>
@@ -12,59 +12,86 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <h2>台灣水庫有效蓄水量(每日更新)</h2><div class="data-src">資料來源:<a href="http://www.wra.gov.tw/">經濟部水利署</a></div>
+    <h2>台灣水庫蓄水量(每日更新)</h2><div class="data-src">資料來源:<a href="http://www.wra.gov.tw/">經濟部水利署</a></div>
+    <div>即時水情資料係自記儀器自動產生，未經人工完整檢驗，僅提供參考。</div>
 		<a href="https://github.com/chihsuan/reservoir-visual"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
   <div class="reservoir">
     <span class="name"><h4>翡翠水庫(台北、新北)</h4></span>
     <svg id="reservoir1" width="100%" height="250"></svg>
+    <span class="volumn"><h6>26806.24萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 14:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>石門水庫(新北、桃園、新竹)</h4></span>
     <svg id="reservoir2" width="100%" height="250"></svg>
+    <span class="volumn"><h6>4131.99萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 14:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>永和山水庫(新竹、苗栗)</h4></span>
     <svg id="reservoir3" width="100%" height="250"></svg>
+    <span class="volumn"><h6>691.908萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 14:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>明德水庫(苗栗)</h4></span>
     <svg id="reservoir4" width="100%" height="250"></svg>
+    <span class="volumn"><h6>265.2萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-20 07:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>鯉魚潭水庫(苗栗、台中)</h4></span>
     <svg id="reservoir5" width="100%" height="250"></svg>
+    <span class="volumn"><h6>3428.54萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 14:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>德基水庫(台中)</h4></span>
     <svg id="reservoir6" width="100%" height="250"></svg>
+    <span class="volumn"><h6>7071.84萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 07:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>日月潭水庫(南投)</h4></span>
     <svg id="reservoir7" width="100%" height="250"></svg>
+    <span class="volumn"><h6>9536.5萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 07:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>仁義潭水庫(嘉義)</h4></span>
     <svg id="reservoir8" width="100%" height="250"></svg>
+    <span class="volumn"><h6>772.07萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 08:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>曾文水庫(嘉義、台南)</h4></span>
     <svg id="reservoir9" width="100%" height="250"></svg>
+    <span class="volumn"><h6>11954萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 09:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>烏山頭水庫(台南)</h4></span>
     <svg id="reservoir10" width="100%" height="250"></svg>
+    <span class="volumn"><h6>5502萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-20 07:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>南化水庫(台南、高雄)</h4></span>
     <svg id="reservoir11" width="100%" height="250"></svg>
+    <span class="volumn"><h6>3309.8萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 07:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>阿公店水庫(高雄)</h4></span>
     <svg id="reservoir12" width="100%" height="250"></svg>
+    <span class="volumn"><h6>823.056848萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 09:00</span>
   </div>
   <div class="reservoir">
     <span class="name"><h4>牡丹水庫(屏東)</h4></span>
     <svg id="reservoir13" width="100%" height="250"></svg>
+    <span class="volumn"><h6>1095.02萬立方公尺</h6></span>
+    <span class="updateAt">更新時間：2015-03-22 09:00</span>
   </div>
 
 <script>

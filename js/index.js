@@ -4,8 +4,9 @@
     configs = {};
 
     for (id in data) {
-       var percentage = data[id][percentage];
-       var number = parseFloat(data[id][percentage]);
+       var percentage = data[id]['percentage'];
+       var number = parseFloat(data[id]['percentage']);
+       var updateAt = data[id]['updateAt'];
        configs[id] = liquidFillGaugeDefaultSettings();
        configs[id].waveAnimate = true;
        configs[id].waveAnimateTime = setAnimateTime(number);
@@ -13,6 +14,7 @@
        configs[id].waveHeight = 0.05;
        configs[id].waveCount = setWavaCount(number);
        setColor(configs[id], number);
+       $('#'+id).siblings('.updateAt').html(updateAt);
        loadLiquidFillGauge(id, percentage, configs[id]);
     }
 
