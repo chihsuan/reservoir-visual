@@ -58,7 +58,7 @@
             }, 
             {
                 "name": "寶山第二水庫", 
-                "title": "寶山第二水庫()", 
+                "title": "寶山第二水庫(新竹)", 
                 "daliyNetflow": 70.74, 
                 "daliyInflow": "54.34", 
                 "daliyOverflow": "125.08", 
@@ -146,7 +146,7 @@
             },
             {
                 "name": "曾文水庫", 
-                "title": "曾文水庫(嘉義)", 
+                "title": "曾文水庫(嘉義、台南)", 
                 "daliyNetflow": 6.4399999999999995, 
                 "daliyInflow": "3.24", 
                 "daliyOverflow": "9.68", 
