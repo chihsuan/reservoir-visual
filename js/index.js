@@ -1,6 +1,6 @@
 (function() {
 
-  d3.json("http://rawgit.com/chihsuan/reservoir-visual/data/data/data.json", function(error, data) {
+  d3.json("http://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data.json", function(error, data) {
     configs = {};
 
     for (id in data) {
