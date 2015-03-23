@@ -7,10 +7,26 @@
        var number = parseFloat(data[reservoirName]['percentage']);
        var updateAt = data[reservoirName]['updateAt'];
        var volumn = data[reservoirName]['volumn'];
-       var id = data[reservoirName]['id']
+       var id = data[reservoirName]['id'];
+       var netFlow = -parseFloat(data[reservoirName]['daliyNetflow']).toFixed(1);
        if (isNaN(number)) {
          $('#'+id).parent().remove();
          continue;
+       }
+      
+       if (netFlow < 0) {
+         //volumn = parseFloat(volumn.replace(',',''));
+         //var exp_days = round(volumn/netFlow).toString();
+         $('#'+id).siblings('.state')
+                  .children('h6')
+                  .text('昨ㄖ水量下降：'+ netFlow + '萬立方公尺');
+         $('#'+id).siblings('.state').addClass('red');
+       }
+       else if (netFlow >= 0) {
+         $('#'+id).siblings('.state')
+                  .children('h6')
+                  .text('作日水量上升：'+ netFlow + '萬立方公尺');
+         $('#'+id).siblings('.state').addClass('blue');
        }
 
        configs[reservoirName] = liquidFillGaugeDefaultSettings();
@@ -20,7 +36,6 @@
        configs[reservoirName].waveHeight = 0.05;
        configs[reservoirName].waveCount = setWavaCount(number);
        setColor(configs[reservoirName], number);
-       //$('#'+id).siblings('.name').text(reservoirName);
        $('#'+id).siblings('.updateAt').html('更新時間：'+updateAt);
        $('#'+id).siblings('.volumn').children('h6').text(volumn+'萬立方公尺');
        loadLiquidFillGauge(id, percentage, configs[reservoirName]);
