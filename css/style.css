@@ -16,4 +16,10 @@ body {
     padding: 10px;
     min-width: 250px
 }
+.red {
+    color: rgb(255, 119, 119);
+}
+.blue {
+    color: rgb(23, 139, 202);
+}
 

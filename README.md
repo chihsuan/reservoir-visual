@@ -17,5 +17,8 @@ canner build
 ```
 the settings are all in `./canner.json`, template is in `index.hbs`
 
+## Thanks
+Thanks to washwashsleep members for [TaiwanReservoirAPI](https://github.com/washwashsleep/TaiwanReservoirAPI)
+
 ## License
 MIT
