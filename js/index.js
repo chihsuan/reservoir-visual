@@ -1,7 +1,6 @@
 (function() {
 
   d3.json("../data/data.json", function(error, data) {
-   
     configs = {};
     for (reservoirName in data) {
        var percentage = data[reservoirName]['percentage'];
