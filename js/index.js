@@ -1,23 +1,30 @@
 (function() {
 
-  d3.json("http://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data.json", function(error, data) {
+  d3.json("../data/data.json", function(error, data) {
+   
     configs = {};
+    for (reservoirName in data) {
+       var percentage = data[reservoirName]['percentage'];
+       var number = parseFloat(data[reservoirName]['percentage']);
+       var updateAt = data[reservoirName]['updateAt'];
+       var volumn = data[reservoirName]['volumn'];
+       var id = data[reservoirName]['id']
+       if (isNaN(number)) {
+         $('#'+id).parent().remove();
+         continue;
+       }
 
-    for (id in data) {
-       var percentage = data[id]['percentage'];
-       var number = parseFloat(data[id]['percentage']);
-       var updateAt = data[id]['updateAt'];
-       var volumn = data[id]['volumn'];
-       configs[id] = liquidFillGaugeDefaultSettings();
-       configs[id].waveAnimate = true;
-       configs[id].waveAnimateTime = setAnimateTime(number);
-       configs[id].waveOffset = 0.3;
-       configs[id].waveHeight = 0.05;
-       configs[id].waveCount = setWavaCount(number);
-       setColor(configs[id], number);
+       configs[reservoirName] = liquidFillGaugeDefaultSettings();
+       configs[reservoirName].waveAnimate = true;
+       configs[reservoirName].waveAnimateTime = setAnimateTime(number);
+       configs[reservoirName].waveOffset = 0.3;
+       configs[reservoirName].waveHeight = 0.05;
+       configs[reservoirName].waveCount = setWavaCount(number);
+       setColor(configs[reservoirName], number);
+       //$('#'+id).siblings('.name').text(reservoirName);
        $('#'+id).siblings('.updateAt').html('更新時間：'+updateAt);
        $('#'+id).siblings('.volumn').children('h6').text(volumn+'萬立方公尺');
-       loadLiquidFillGauge(id, percentage, configs[id]);
+       loadLiquidFillGauge(id, percentage, configs[reservoirName]);
     }
 
     function setColor(config, percentage) {
@@ -46,7 +53,6 @@
     }
 
     function setAnimateTime(percentage) {
-      console.log(percentage);
        if (percentage > 75) {
         return 2000;
       }
