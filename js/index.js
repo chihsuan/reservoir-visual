@@ -19,7 +19,7 @@
          //var exp_days = round(volumn/netFlow).toString();
          $('#'+id).siblings('.state')
                   .children('h6')
-                  .text('昨ㄖ水量下降：'+ netFlow + '萬立方公尺');
+                  .text('作日水量下降：'+ netFlow + '萬立方公尺');
          $('#'+id).siblings('.state').addClass('red');
        }
        else if (netFlow >= 0) {
