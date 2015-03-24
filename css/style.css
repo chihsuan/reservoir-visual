@@ -14,7 +14,8 @@ body {
     width: 20%;
     float: left;
     padding: 10px;
-    min-width: 250px
+    min-width: 250px;
+    padding-bottom: 30px;
 }
 .red {
     color: rgb(255, 119, 119);
@@ -22,4 +23,3 @@ body {
 .blue {
     color: rgb(23, 139, 202);
 }
-
