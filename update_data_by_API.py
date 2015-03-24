@@ -16,7 +16,7 @@ def write_json(file_name, content):
     with open(file_name, 'w') as output_file:
         json.dump(content, output_file, indent=4)
 
-api = 'http://128.199.223.114:10080/'
+api = 'http://127.0.0.1:10080/'
 data = read_json('data/data.json')
 response = urllib2.urlopen(api);
 
@@ -33,7 +33,7 @@ for name, reservoir in data.iteritems():
             reservoir['name'] = reservoir_new['reservoirName']
             reservoir['daliyInflow'] = reservoir_new['daliyInflow']
             reservoir['daliyOverflow'] = reservoir_new['daliyOverflow']
-            reservoir['updateAt'] = reservoir_new['daliyTime']
+            reservoir['updateAt'] = reservoir_new['immediateTime']
             reservoir['percentage'] = reservoir_new['immediatePercentage'][:-2]
             print reservoir_new['immediatePercentage'][:-2]
             reservoir['volumn'] = reservoir_new['immediateStorage']
@@ -41,6 +41,7 @@ for name, reservoir in data.iteritems():
                 reservoir['daliyNetflow'] = float(reservoir_new['daliyOverflow']) -\
                         float(reservoir_new['daliyInflow'])
             except:
-                reservoir['daliyInflow'] = None
+                print 'daliyflow currently not updated'
+                #reservoir['daliyInflow'] = None
 
 write_json('data/data.json', data)
