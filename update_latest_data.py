@@ -27,7 +27,7 @@ for page, url in pages.iteritems():
     volumn = td[3].string
     update_at = td[0].string
     if name in data:
-        data[name]['percentage'] = percentage
+        data[name]['percentage'] = percentage[:-1]
         data[name]['volumn'] = volumn
         time = update_at.split(' ')
         data[name]['updateAt'] = '{0} ({1}時)'.format(time[0], int(time[1].split(':')[0]))
