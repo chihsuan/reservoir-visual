@@ -1,1 +1,202 @@
-{"\u7261\u4e39\u6c34\u5eab":{"name":"\u7261\u4e39\u6c34\u5eab","daliyNetflow":7.2299999999999995,"daliyInflow":"2.45","daliyOverflow":"9.68","percentage":"40.8","volumn":"1080.56","updateAt":"2015-03-24 (7\u6642)","id":"reservoir18"},"\u77f3\u5ca1\u58e9":{"name":"\u77f3\u5ca1\u58e9","daliyNetflow":-0.20000000000001705,"daliyInflow":"207.30","daliyOverflow":"207.10","percentage":"19.1","volumn":"21.65","updateAt":"2015-03-23(23\u6642)","id":"reservoir9"},"\u6210\u529f\u6c34\u5eab":{"name":"\u6210\u529f\u6c34\u5eab","daliyNetflow":0.0,"daliyInflow":"0.00","daliyOverflow":"0.00","percentage":"17.3","volumn":"21.00","updateAt":"2015-03-23(7\u6642)","id":"reservoir19"},"\u66fe\u6587\u6c34\u5eab":{"name":"\u66fe\u6587\u6c34\u5eab","daliyNetflow":458.0,"daliyInflow":"23.40","daliyOverflow":"481.40","percentage":"23.6","volumn":"11196","updateAt":"2015-03-24 (7\u6642)","id":"reservoir14"},"\u660e\u5fb7\u6c34\u5eab":{"name":"\u660e\u5fb7\u6c34\u5eab","daliyNetflow":-1.58,"daliyInflow":"5.12","daliyOverflow":"3.54","percentage":"20.7","volumn":"264.6719","updateAt":"2015-03-24 (7\u6642)","id":"reservoir4"},"\u6c38\u548c\u5c71\u6c34\u5eab":{"name":"\u6c38\u548c\u5c71\u6c34\u5eab","daliyNetflow":-4.299999999999999,"daliyInflow":"17.90","daliyOverflow":"13.60","percentage":"24.6","volumn":"692.609","updateAt":"2015-03-24 (9\u6642)","id":"reservoir3"},"\u5bf6\u5c71\u6c34\u5eab":{"name":"\u5bf6\u5c71\u6c34\u5eab","daliyNetflow":-0.6600000000000001,"daliyInflow":"9.48","daliyOverflow":"8.82","percentage":"35.6","volumn":"191.60","updateAt":"2015-03-23(7\u6642)","id":"reservoir5"},"\u963f\u516c\u5e97\u6c34\u5eab":{"name":"\u963f\u516c\u5e97\u6c34\u5eab","daliyNetflow":2.84,"daliyInflow":"0.18","daliyOverflow":"3.02","percentage":"49.1","volumn":"808.76","updateAt":"2015-03-24 (7\u6642)","id":"reservoir17"},"\u5bf6\u5c71\u7b2c\u4e8c\u6c34\u5eab":{"name":"\u5bf6\u5c71\u7b2c\u4e8c\u6c34\u5eab","daliyNetflow":-0.41999999999999993,"daliyInflow":"13.16","daliyOverflow":"12.74","percentage":"24.6","volumn":"774.85","updateAt":"2015-03-23(23\u6642)","id":"reservoir6"},"\u5357\u5316\u6c34\u5eab":{"name":"\u5357\u5316\u6c34\u5eab","daliyNetflow":34.0,"daliyInflow":"0.30","daliyOverflow":"34.30","percentage":"33.0","volumn":"3235.4","updateAt":"2015-03-24 (7\u6642)","id":"reservoir16"},"\u9727\u793e\u6c34\u5eab":{"name":"\u9727\u793e\u6c34\u5eab","daliyNetflow":146.88,"daliyInflow":"30.24","daliyOverflow":"177.12","percentage":"20.7","volumn":"979.04","updateAt":"2015-03-23(7\u6642)","id":"reservoir11"},"\u862d\u6f6d\u6c34\u5eab":{"name":"\u862d\u6f6d\u6c34\u5eab","daliyNetflow":3.07,"daliyInflow":"0.00","daliyOverflow":"3.07","percentage":"47.8","volumn":"441.84","updateAt":"2015-03-23(7\u6642)","id":"reservoir13"},"\u77f3\u9580\u6c34\u5eab":{"name":"\u77f3\u9580\u6c34\u5eab","daliyNetflow":-45.890000000000015,"daliyInflow":"132.11","daliyOverflow":"86.22","percentage":"20.6","volumn":"4154.76","updateAt":"2015-03-24 (9\u6642)","id":"reservoir2"},"\u70cf\u5c71\u982d\u6c34\u5eab":{"name":"\u70cf\u5c71\u982d\u6c34\u5eab","daliyNetflow":-183.0,"daliyInflow":"350.20","daliyOverflow":"167.20","percentage":"74.2","volumn":"5924","updateAt":"2015-03-24 (7\u6642)","id":"reservoir15"},"\u5fb7\u57fa\u6c34\u5eab":{"name":"\u5fb7\u57fa\u6c34\u5eab","daliyNetflow":38.97,"daliyInflow":"86.97","daliyOverflow":"125.94","percentage":"46.3","volumn":"6956.94","updateAt":"2015-03-24 (7\u6642)","id":"reservoir8"},"\u4ec1\u7fa9\u6f6d\u6c34\u5eab":{"name":"\u4ec1\u7fa9\u6f6d\u6c34\u5eab","daliyNetflow":9.74,"daliyInflow":"0.59","daliyOverflow":"10.33","percentage":"29.1","volumn":"752.53","updateAt":"2015-03-24 (7\u6642)","id":"reservoir12"},"\u7fe1\u7fe0\u6c34\u5eab":{"name":"\u7fe1\u7fe0\u6c34\u5eab","daliyNetflow":-33.5,"daliyInflow":"180.32","daliyOverflow":"146.82","percentage":"80.1","volumn":"26898.48","updateAt":"2015-03-24 (9\u6642)","id":"reservoir1"},"\u9bc9\u9b5a\u6f6d\u6c34\u5eab":{"name":"\u9bc9\u9b5a\u6f6d\u6c34\u5eab","daliyNetflow":24.509999999999998,"daliyInflow":"29.03","daliyOverflow":"53.54","percentage":"29.4","volumn":"3395.63","updateAt":"2015-03-24 (9\u6642)","id":"reservoir7"},"\u65e5\u6708\u6f6d\u6c34\u5eab":{"name":"\u65e5\u6708\u6f6d\u6c34\u5eab","daliyNetflow":-54.5,"daliyInflow":"192.67","daliyOverflow":"138.17","percentage":"74.3","volumn":"9757.34","updateAt":"2015-03-24 (7\u6642)","id":"reservoir10"}}
+{
+    "\u7261\u4e39\u6c34\u5eab": {
+        "name": "\u7261\u4e39\u6c34\u5eab", 
+        "daliyNetflow": 7.2299999999999995, 
+        "daliyInflow": "2.45", 
+        "daliyOverflow": "9.68", 
+        "percentage": "40.8", 
+        "volumn": "1079.75", 
+        "updateAt": "2015-03-24 (10\u6642)", 
+        "id": "reservoir18"
+    }, 
+    "\u77f3\u5ca1\u58e9": {
+        "name": "\u77f3\u5ca1\u58e9", 
+        "daliyNetflow": -0.20000000000001705, 
+        "daliyInflow": "207.30", 
+        "daliyOverflow": "207.10", 
+        "percentage": "19.1", 
+        "volumn": "21.65", 
+        "updateAt": "2015-03-23(23\u6642)", 
+        "id": "reservoir9"
+    }, 
+    "\u6210\u529f\u6c34\u5eab": {
+        "name": "\u6210\u529f\u6c34\u5eab", 
+        "daliyNetflow": 0.0, 
+        "daliyInflow": "0.00", 
+        "daliyOverflow": "0.00", 
+        "percentage": "17.3", 
+        "volumn": "21.00", 
+        "updateAt": "2015-03-23(7\u6642)", 
+        "id": "reservoir19"
+    }, 
+    "\u66fe\u6587\u6c34\u5eab": {
+        "name": "\u66fe\u6587\u6c34\u5eab", 
+        "daliyNetflow": 458.0, 
+        "daliyInflow": "23.40", 
+        "daliyOverflow": "481.40", 
+        "percentage": "23.6", 
+        "volumn": "11196", 
+        "updateAt": "2015-03-24 (10\u6642)", 
+        "id": "reservoir14"
+    }, 
+    "\u660e\u5fb7\u6c34\u5eab": {
+        "name": "\u660e\u5fb7\u6c34\u5eab", 
+        "daliyNetflow": -1.58, 
+        "daliyInflow": "5.12", 
+        "daliyOverflow": "3.54", 
+        "percentage": "20.7", 
+        "volumn": "264.6719", 
+        "updateAt": "2015-03-24 (7\u6642)", 
+        "id": "reservoir4"
+    }, 
+    "\u6c38\u548c\u5c71\u6c34\u5eab": {
+        "name": "\u6c38\u548c\u5c71\u6c34\u5eab", 
+        "daliyNetflow": -4.299999999999999, 
+        "daliyInflow": "17.90", 
+        "daliyOverflow": "13.60", 
+        "percentage": "24.7", 
+        "volumn": "694.712", 
+        "updateAt": "2015-03-24 (14\u6642)", 
+        "id": "reservoir3"
+    }, 
+    "\u5bf6\u5c71\u6c34\u5eab": {
+        "name": "\u5bf6\u5c71\u6c34\u5eab", 
+        "daliyNetflow": -0.6600000000000001, 
+        "daliyInflow": "9.48", 
+        "daliyOverflow": "8.82", 
+        "percentage": "35.6", 
+        "volumn": "191.60", 
+        "updateAt": "2015-03-23(7\u6642)", 
+        "id": "reservoir5"
+    }, 
+    "\u963f\u516c\u5e97\u6c34\u5eab": {
+        "name": "\u963f\u516c\u5e97\u6c34\u5eab", 
+        "daliyNetflow": 2.84, 
+        "daliyInflow": "0.18", 
+        "daliyOverflow": "3.02", 
+        "percentage": "48.8", 
+        "volumn": "803.589458", 
+        "updateAt": "2015-03-24 (10\u6642)", 
+        "id": "reservoir17"
+    }, 
+    "\u65b0\u5c71\u6c34\u5eab": {
+        "name": "\u65b0\u5c71\u6c34\u5eab", 
+        "daliyNetflow": 7.2299999999999995, 
+        "daliyInflow": "2.45", 
+        "daliyOverflow": "9.68", 
+        "percentage": "40.9", 
+        "volumn": "1,082.96", 
+        "updateAt": "2015-03-23(23\u6642)", 
+        "id": "reservoir0"
+    }, 
+    "\u5357\u5316\u6c34\u5eab": {
+        "name": "\u5357\u5316\u6c34\u5eab", 
+        "daliyNetflow": 34.0, 
+        "daliyInflow": "0.30", 
+        "daliyOverflow": "34.30", 
+        "percentage": "33.0", 
+        "volumn": "3235.4", 
+        "updateAt": "2015-03-24 (7\u6642)", 
+        "id": "reservoir16"
+    }, 
+    "\u9727\u793e\u6c34\u5eab": {
+        "name": "\u9727\u793e\u6c34\u5eab", 
+        "daliyNetflow": 146.88, 
+        "daliyInflow": "30.24", 
+        "daliyOverflow": "177.12", 
+        "percentage": "20.7", 
+        "volumn": "979.04", 
+        "updateAt": "2015-03-23(7\u6642)", 
+        "id": "reservoir11"
+    }, 
+    "\u862d\u6f6d\u6c34\u5eab": {
+        "name": "\u862d\u6f6d\u6c34\u5eab", 
+        "daliyNetflow": 3.07, 
+        "daliyInflow": "0.00", 
+        "daliyOverflow": "3.07", 
+        "percentage": "47.8", 
+        "volumn": "441.84", 
+        "updateAt": "2015-03-23(7\u6642)", 
+        "id": "reservoir13"
+    }, 
+    "\u77f3\u9580\u6c34\u5eab": {
+        "name": "\u77f3\u9580\u6c34\u5eab", 
+        "daliyNetflow": -45.890000000000015, 
+        "daliyInflow": "132.11", 
+        "daliyOverflow": "86.22", 
+        "percentage": "20.8", 
+        "volumn": "4190.7", 
+        "updateAt": "2015-03-24 (14\u6642)", 
+        "id": "reservoir2"
+    }, 
+    "\u70cf\u5c71\u982d\u6c34\u5eab": {
+        "name": "\u70cf\u5c71\u982d\u6c34\u5eab", 
+        "daliyNetflow": -183.0, 
+        "daliyInflow": "350.20", 
+        "daliyOverflow": "167.20", 
+        "percentage": "74.2", 
+        "volumn": "5924", 
+        "updateAt": "2015-03-24 (7\u6642)", 
+        "id": "reservoir15"
+    }, 
+    "\u9bc9\u9b5a\u6f6d\u6c34\u5eab": {
+        "name": "\u9bc9\u9b5a\u6f6d\u6c34\u5eab", 
+        "daliyNetflow": 24.509999999999998, 
+        "daliyInflow": "29.03", 
+        "daliyOverflow": "53.54", 
+        "percentage": "29.3", 
+        "volumn": "3387.88", 
+        "updateAt": "2015-03-24 (14\u6642)", 
+        "id": "reservoir7"
+    }, 
+    "\u4ec1\u7fa9\u6f6d\u6c34\u5eab": {
+        "name": "\u4ec1\u7fa9\u6f6d\u6c34\u5eab", 
+        "daliyNetflow": 9.74, 
+        "daliyInflow": "0.59", 
+        "daliyOverflow": "10.33", 
+        "percentage": "29.1", 
+        "volumn": "752.53", 
+        "updateAt": "2015-03-24 (7\u6642)", 
+        "id": "reservoir12"
+    }, 
+    "\u7fe1\u7fe0\u6c34\u5eab": {
+        "name": "\u7fe1\u7fe0\u6c34\u5eab", 
+        "daliyNetflow": -33.5, 
+        "daliyInflow": "180.32", 
+        "daliyOverflow": "146.82", 
+        "percentage": "80.4", 
+        "volumn": "26990.84", 
+        "updateAt": "2015-03-24 (14\u6642)", 
+        "id": "reservoir1"
+    }, 
+    "\u5fb7\u57fa\u6c34\u5eab": {
+        "name": "\u5fb7\u57fa\u6c34\u5eab", 
+        "daliyNetflow": 38.97, 
+        "daliyInflow": "86.97", 
+        "daliyOverflow": "125.94", 
+        "percentage": "46.3", 
+        "volumn": "6956.94", 
+        "updateAt": "2015-03-24 (7\u6642)", 
+        "id": "reservoir8"
+    }, 
+    "\u65e5\u6708\u6f6d\u6c34\u5eab": {
+        "name": "\u65e5\u6708\u6f6d\u6c34\u5eab", 
+        "daliyNetflow": -54.5, 
+        "daliyInflow": "192.67", 
+        "daliyOverflow": "138.17", 
+        "percentage": "74.3", 
+        "volumn": "9757.34", 
+        "updateAt": "2015-03-24 (7\u6642)", 
+        "id": "reservoir10"
+    }, 
+    "\u5bf6\u5c71\u7b2c\u4e8c\u6c34\u5eab": {
+        "name": "\u5bf6\u5c71\u7b2c\u4e8c\u6c34\u5eab", 
+        "daliyNetflow": -0.41999999999999993, 
+        "daliyInflow": "13.16", 
+        "daliyOverflow": "12.74", 
+        "percentage": "24.6", 
+        "volumn": "774.85", 
+        "updateAt": "2015-03-23(23\u6642)", 
+        "id": "reservoir6"
+    }
+}
