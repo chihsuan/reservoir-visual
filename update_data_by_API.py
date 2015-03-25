@@ -53,13 +53,15 @@ for name, reservoir in data.iteritems():
     for reservoir_new in new_data['data']:
         if name == reservoir_new['reservoirName']:
             print name, reservoir['id'], reservoir_new['immediateTime']
-            if len(reservoir_new['immediateStorage']) > 3:
+            if reservoir_new['immediateStorage'] != '--':
                 reservoir['updateAt'] = reservoir_new['immediateTime']
                 reservoir['volumn'] = reservoir_new['immediateStorage'].replace(',', '')
-                if len(reservoir_new['immediateStorage']) > 3:
+                if reservoir_new['immediatePercentage'] == '--':
                     reservoir['percentage'] = (float(reservoir['volumn']) / \
                             float(reservoir['baseAvailable'])) * 100
                 else:
-                    reservoir['percentage'] = reservoir_new['immediatePercentage'][:-2]
+                    reservoir['percentage'] = float(reservoir_new['immediatePercentage'][:-2])
+            else:
+                reservoir['percentage'] = float(reservoir['percentage'])
 
 write_json('data/data.json', data)
