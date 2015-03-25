@@ -32,16 +32,15 @@ for name, reservoir in data.iteritems():
     for reservoir_new in new_data['data']:
         if name == reservoir_new['reservoirName']:
             print name, reservoir['id']
-            reservoir['name'] = reservoir_new['reservoirName']
             reservoir['daliyInflow'] = reservoir_new['daliyInflow']
             reservoir['daliyOverflow'] = reservoir_new['daliyOverflow']
-            reservoir['baseAvailable'] = reservoir_new['baseAvailable'].replace(',', '')
+            if reservoir_new['baseAvailable'] != '--':
+                reservoir['baseAvailable'] = reservoir_new['baseAvailable'].replace(',', '')
             try:
                 reservoir['daliyNetflow'] = float(reservoir_new['daliyOverflow']) -\
                         float(reservoir_new['daliyInflow'])
             except:
-                print 'daliyflow currently not updated'
-                #reservoir['daliyInflow'] = None
+                reservoir['daliyNetflow'] = '--'
 
 response = urllib2.urlopen(api_today);
 try:
@@ -54,9 +53,13 @@ for name, reservoir in data.iteritems():
     for reservoir_new in new_data['data']:
         if name == reservoir_new['reservoirName']:
             print name, reservoir['id'], reservoir_new['immediateTime']
-            if len(reservoir_new['immediateTime']) > 3:
+            if len(reservoir_new['immediateStorage']) > 3:
                 reservoir['updateAt'] = reservoir_new['immediateTime']
-                reservoir['percentage'] = reservoir_new['immediatePercentage'][:-2]
-                reservoir['volumn'] = reservoir_new['immediateStorage']
+                reservoir['volumn'] = reservoir_new['immediateStorage'].replace(',', '')
+                if len(reservoir_new['immediateStorage']) > 3:
+                    reservoir['percentage'] = (float(reservoir['volumn']) / \
+                            float(reservoir['baseAvailable'])) * 100
+                else:
+                    reservoir['percentage'] = reservoir_new['immediatePercentage'][:-2]
 
 write_json('data/data.json', data)

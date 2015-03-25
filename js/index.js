@@ -34,7 +34,7 @@
          $('#'+id).siblings('.state').addClass('blue');
        }
 
-       if (isNaN(netPercentageVar)) {
+       if (isNaN(netFlow)) {
           $('#'+id).siblings('.state')
                   .children('h6')
                   .text('昨日水量狀態：待更新');
