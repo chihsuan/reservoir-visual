@@ -17,9 +17,11 @@ def write_json(file_name, content):
         json.dump(content, output_file, indent=4)
 
 api = 'http://127.0.0.1:10080/'
-data = read_json('data/data.json')
-response = urllib2.urlopen(api);
+api_today = 'http://127.0.0.1:10080/today'
 
+data = read_json('data/data.json')
+
+response = urllib2.urlopen(api);
 try:
     new_data = json.loads(response.read())
 except e:
@@ -33,10 +35,6 @@ for name, reservoir in data.iteritems():
             reservoir['name'] = reservoir_new['reservoirName']
             reservoir['daliyInflow'] = reservoir_new['daliyInflow']
             reservoir['daliyOverflow'] = reservoir_new['daliyOverflow']
-            reservoir['updateAt'] = reservoir_new['immediateTime']
-            reservoir['percentage'] = reservoir_new['immediatePercentage'][:-2]
-            print reservoir_new['immediatePercentage'][:-2]
-            reservoir['volumn'] = reservoir_new['immediateStorage']
             reservoir['baseAvailable'] = reservoir_new['baseAvailable'].replace(',', '')
             try:
                 reservoir['daliyNetflow'] = float(reservoir_new['daliyOverflow']) -\
@@ -44,5 +42,20 @@ for name, reservoir in data.iteritems():
             except:
                 print 'daliyflow currently not updated'
                 #reservoir['daliyInflow'] = None
+
+response = urllib2.urlopen(api_today);
+try:
+    new_data = json.loads(response.read())
+except e:
+    print e
+    sys.exit(1)
+
+for name, reservoir in data.iteritems():
+    for reservoir_new in new_data['data']:
+        if name == reservoir_new['reservoirName']:
+            print name, reservoir['id'], reservoir_new['immediateTime']
+            reservoir['updateAt'] = reservoir_new['immediateTime']
+            reservoir['percentage'] = reservoir_new['immediatePercentage'][:-2]
+            reservoir['volumn'] = reservoir_new['immediateStorage']
 
 write_json('data/data.json', data)
