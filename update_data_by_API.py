@@ -54,8 +54,9 @@ for name, reservoir in data.iteritems():
     for reservoir_new in new_data['data']:
         if name == reservoir_new['reservoirName']:
             print name, reservoir['id'], reservoir_new['immediateTime']
-            reservoir['updateAt'] = reservoir_new['immediateTime']
-            reservoir['percentage'] = reservoir_new['immediatePercentage'][:-2]
-            reservoir['volumn'] = reservoir_new['immediateStorage']
+            if len(reservoir_new['immediateTime']) > 3:
+                reservoir['updateAt'] = reservoir_new['immediateTime']
+                reservoir['percentage'] = reservoir_new['immediatePercentage'][:-2]
+                reservoir['volumn'] = reservoir_new['immediateStorage']
 
 write_json('data/data.json', data)
