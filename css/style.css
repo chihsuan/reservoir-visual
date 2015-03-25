@@ -23,3 +23,7 @@ body {
 .blue {
     color: rgb(23, 139, 202);
 }
+.fb-like.fb_iframe_widget {
+    overflow: hidden;
+    width: 330px;
+}
