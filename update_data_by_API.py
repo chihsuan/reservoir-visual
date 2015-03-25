@@ -37,6 +37,7 @@ for name, reservoir in data.iteritems():
             reservoir['percentage'] = reservoir_new['immediatePercentage'][:-2]
             print reservoir_new['immediatePercentage'][:-2]
             reservoir['volumn'] = reservoir_new['immediateStorage']
+            reservoir['baseAvailable'] = reservoir_new['baseAvailable'].replace(',', '')
             try:
                 reservoir['daliyNetflow'] = float(reservoir_new['daliyOverflow']) -\
                         float(reservoir_new['daliyInflow'])
