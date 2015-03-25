@@ -27,11 +27,18 @@
        else if (netFlow >= 0) {
          netPercentageVar = ((netFlow) / 
              parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2)
-       
+         
          $('#'+id).siblings('.state')
                   .children('h6')
                   .text('昨日水量上升：'+ netPercentageVar + '%');
          $('#'+id).siblings('.state').addClass('blue');
+       }
+
+       if (isNaN(netPercentageVar)) {
+          $('#'+id).siblings('.state')
+                  .children('h6')
+                  .text('昨日水量狀態：待更新');
+          $('#'+id).siblings('.state').removeClass();
        }
 
        configs[reservoirName] = liquidFillGaugeDefaultSettings();
