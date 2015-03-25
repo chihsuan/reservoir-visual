@@ -9,23 +9,28 @@
        var volumn = data[reservoirName]['volumn'];
        var id = data[reservoirName]['id'];
        var netFlow = -parseFloat(data[reservoirName]['daliyNetflow']).toFixed(1);
+       var netPercentageVar;
        if (isNaN(number)) {
          $('#'+id).parent().remove();
          continue;
        }
       
        if (netFlow < 0) {
-         //volumn = parseFloat(volumn.replace(',',''));
-         //var exp_days = round(volumn/netFlow).toString();
+         netPercentageVar = ((-netFlow) / 
+             parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2)
+         
          $('#'+id).siblings('.state')
                   .children('h6')
-                  .text('昨日水量下降：'+ (-netFlow) + '萬立方公尺');
+                  .text('昨日水量下降：'+ netPercentageVar + '%');
          $('#'+id).siblings('.state').addClass('red');
        }
        else if (netFlow >= 0) {
+         netPercentageVar = ((netFlow) / 
+             parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2)
+       
          $('#'+id).siblings('.state')
                   .children('h6')
-                  .text('昨日水量上升：'+ netFlow + '萬立方公尺');
+                  .text('昨日水量上升：'+ netPercentageVar + '%');
          $('#'+id).siblings('.state').addClass('blue');
        }
 

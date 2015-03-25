@@ -1,13 +1,25 @@
 {
+    "\u5fb7\u57fa\u6c34\u5eab": {
+        "name": "\u5fb7\u57fa\u6c34\u5eab", 
+        "daliyNetflow": 132.48, 
+        "daliyInflow": "73.34", 
+        "daliyOverflow": "205.82", 
+        "percentage": "45.5", 
+        "volumn": "6824.45", 
+        "updateAt": "2015-03-25 (7\u6642)", 
+        "id": "reservoir8", 
+        "baseAvailable": "15000.00"
+    }, 
     "\u7261\u4e39\u6c34\u5eab": {
         "name": "\u7261\u4e39\u6c34\u5eab", 
         "daliyNetflow": 7.199999999999999, 
         "daliyInflow": "2.48", 
         "daliyOverflow": "9.68", 
-        "percentage": "40.5", 
-        "volumn": "1072.57", 
-        "updateAt": "2015-03-25 (7\u6642)", 
-        "id": "reservoir18"
+        "percentage": "40.4", 
+        "volumn": "1070.17", 
+        "updateAt": "2015-03-25 (14\u6642)", 
+        "id": "reservoir18", 
+        "baseAvailable": "2643.60"
     }, 
     "\u77f3\u5ca1\u58e9": {
         "name": "\u77f3\u5ca1\u58e9", 
@@ -17,7 +29,8 @@
         "percentage": "25.6", 
         "volumn": "29.03", 
         "updateAt": "2015-03-24(23\u6642)", 
-        "id": "reservoir9"
+        "id": "reservoir9", 
+        "baseAvailable": "113.30"
     }, 
     "\u6210\u529f\u6c34\u5eab": {
         "name": "\u6210\u529f\u6c34\u5eab", 
@@ -27,7 +40,8 @@
         "percentage": "17.3", 
         "volumn": "21.00", 
         "updateAt": "2015-03-24(7\u6642)", 
-        "id": "reservoir19"
+        "id": "reservoir19", 
+        "baseAvailable": "121.01"
     }, 
     "\u66fe\u6587\u6c34\u5eab": {
         "name": "\u66fe\u6587\u6c34\u5eab", 
@@ -36,8 +50,9 @@
         "daliyOverflow": "0.00", 
         "percentage": "23.6", 
         "volumn": "11212", 
-        "updateAt": "2015-03-25 (7\u6642)", 
-        "id": "reservoir14"
+        "updateAt": "2015-03-25 (14\u6642)", 
+        "id": "reservoir14", 
+        "baseAvailable": "47330.00"
     }, 
     "\u660e\u5fb7\u6c34\u5eab": {
         "name": "\u660e\u5fb7\u6c34\u5eab", 
@@ -47,7 +62,8 @@
         "percentage": "21.0", 
         "volumn": "268.3684", 
         "updateAt": "2015-03-25 (7\u6642)", 
-        "id": "reservoir4"
+        "id": "reservoir4", 
+        "baseAvailable": "1276.00"
     }, 
     "\u6c38\u548c\u5c71\u6c34\u5eab": {
         "name": "\u6c38\u548c\u5c71\u6c34\u5eab", 
@@ -55,9 +71,10 @@
         "daliyInflow": "21.00", 
         "daliyOverflow": "14.40", 
         "percentage": "24.7", 
-        "volumn": "694.712", 
-        "updateAt": "2015-03-25 (14\u6642)", 
-        "id": "reservoir3"
+        "volumn": "695.414", 
+        "updateAt": "2015-03-25 (15\u6642)", 
+        "id": "reservoir3", 
+        "baseAvailable": "2809.58"
     }, 
     "\u5bf6\u5c71\u6c34\u5eab": {
         "name": "\u5bf6\u5c71\u6c34\u5eab", 
@@ -67,17 +84,19 @@
         "percentage": "36.1", 
         "volumn": "194.30", 
         "updateAt": "2015-03-25(7\u6642)", 
-        "id": "reservoir5"
+        "id": "reservoir5", 
+        "baseAvailable": "538.00"
     }, 
     "\u963f\u516c\u5e97\u6c34\u5eab": {
         "name": "\u963f\u516c\u5e97\u6c34\u5eab", 
         "daliyNetflow": 13.360000000000001, 
         "daliyInflow": "0.03", 
         "daliyOverflow": "13.39", 
-        "percentage": "48.2", 
-        "volumn": "794.78", 
-        "updateAt": "2015-03-25 (7\u6642)", 
-        "id": "reservoir17"
+        "percentage": "47.5", 
+        "volumn": "782.170209", 
+        "updateAt": "2015-03-25 (14\u6642)", 
+        "id": "reservoir17", 
+        "baseAvailable": "1646.63"
     }, 
     "\u65b0\u5c71\u6c34\u5eab": {
         "name": "\u65b0\u5c71\u6c34\u5eab", 
@@ -87,17 +106,8 @@
         "percentage": "82.4", 
         "volumn": "825.70", 
         "updateAt": "2015-03-25(8\u6642)", 
-        "id": "reservoir0"
-    }, 
-    "\u5357\u5316\u6c34\u5eab": {
-        "name": "\u5357\u5316\u6c34\u5eab", 
-        "daliyNetflow": 3.1, 
-        "daliyInflow": "0.30", 
-        "daliyOverflow": "3.40", 
-        "percentage": "32.6", 
-        "volumn": "3201.3", 
-        "updateAt": "2015-03-25 (7\u6642)", 
-        "id": "reservoir16"
+        "id": "reservoir0", 
+        "baseAvailable": "1002.00"
     }, 
     "\u9727\u793e\u6c34\u5eab": {
         "name": "\u9727\u793e\u6c34\u5eab", 
@@ -107,7 +117,8 @@
         "percentage": "14.7", 
         "volumn": "694.66", 
         "updateAt": "2015-03-25(7\u6642)", 
-        "id": "reservoir11"
+        "id": "reservoir11", 
+        "baseAvailable": "4726.81"
     }, 
     "\u862d\u6f6d\u6c34\u5eab": {
         "name": "\u862d\u6f6d\u6c34\u5eab", 
@@ -117,7 +128,8 @@
         "percentage": "47.2", 
         "volumn": "436.26", 
         "updateAt": "2015-03-25(7\u6642)", 
-        "id": "reservoir13"
+        "id": "reservoir13", 
+        "baseAvailable": "923.73"
     }, 
     "\u77f3\u9580\u6c34\u5eab": {
         "name": "\u77f3\u9580\u6c34\u5eab", 
@@ -125,9 +137,10 @@
         "daliyInflow": "217.12", 
         "daliyOverflow": "69.98", 
         "percentage": "21.0", 
-        "volumn": "4233.41", 
-        "updateAt": "2015-03-25 (14\u6642)", 
-        "id": "reservoir2"
+        "volumn": "4236.71", 
+        "updateAt": "2015-03-25 (15\u6642)", 
+        "id": "reservoir2", 
+        "baseAvailable": "20123.60"
     }, 
     "\u70cf\u5c71\u982d\u6c34\u5eab": {
         "name": "\u70cf\u5c71\u982d\u6c34\u5eab", 
@@ -137,7 +150,8 @@
         "percentage": "72.1", 
         "volumn": "5757", 
         "updateAt": "2015-03-25 (7\u6642)", 
-        "id": "reservoir15"
+        "id": "reservoir15", 
+        "baseAvailable": "7982.00"
     }, 
     "\u9bc9\u9b5a\u6f6d\u6c34\u5eab": {
         "name": "\u9bc9\u9b5a\u6f6d\u6c34\u5eab", 
@@ -145,9 +159,10 @@
         "daliyInflow": "62.04", 
         "daliyOverflow": "53.61", 
         "percentage": "29.5", 
-        "volumn": "3411.11", 
-        "updateAt": "2015-03-25 (14\u6642)", 
-        "id": "reservoir7"
+        "volumn": "3409.18", 
+        "updateAt": "2015-03-25 (15\u6642)", 
+        "id": "reservoir7", 
+        "baseAvailable": "11546.97"
     }, 
     "\u4ec1\u7fa9\u6f6d\u6c34\u5eab": {
         "name": "\u4ec1\u7fa9\u6f6d\u6c34\u5eab", 
@@ -157,27 +172,30 @@
         "percentage": "28.7", 
         "volumn": "741.25", 
         "updateAt": "2015-03-25 (7\u6642)", 
-        "id": "reservoir12"
+        "id": "reservoir12", 
+        "baseAvailable": "2580.00"
     }, 
     "\u7fe1\u7fe0\u6c34\u5eab": {
         "name": "\u7fe1\u7fe0\u6c34\u5eab", 
         "daliyNetflow": -411.6, 
         "daliyInflow": "411.60", 
         "daliyOverflow": "0.00", 
-        "percentage": "81.9", 
-        "volumn": "27480.06", 
-        "updateAt": "2015-03-25 (14\u6642)", 
-        "id": "reservoir1"
+        "percentage": "82.0", 
+        "volumn": "27513.93", 
+        "updateAt": "2015-03-25 (15\u6642)", 
+        "id": "reservoir1", 
+        "baseAvailable": "33550.50"
     }, 
-    "\u5fb7\u57fa\u6c34\u5eab": {
-        "name": "\u5fb7\u57fa\u6c34\u5eab", 
-        "daliyNetflow": 132.48, 
-        "daliyInflow": "73.34", 
-        "daliyOverflow": "205.82", 
-        "percentage": "45.5", 
-        "volumn": "6824.45", 
+    "\u5357\u5316\u6c34\u5eab": {
+        "name": "\u5357\u5316\u6c34\u5eab", 
+        "daliyNetflow": 34.1, 
+        "daliyInflow": "0.30", 
+        "daliyOverflow": "34.40", 
+        "percentage": "32.6", 
+        "volumn": "3201.3", 
         "updateAt": "2015-03-25 (7\u6642)", 
-        "id": "reservoir8"
+        "id": "reservoir16", 
+        "baseAvailable": "9793.00"
     }, 
     "\u65e5\u6708\u6f6d\u6c34\u5eab": {
         "name": "\u65e5\u6708\u6f6d\u6c34\u5eab", 
@@ -187,7 +205,8 @@
         "percentage": "75.5", 
         "volumn": "9917.54", 
         "updateAt": "2015-03-25 (7\u6642)", 
-        "id": "reservoir10"
+        "id": "reservoir10", 
+        "baseAvailable": "13124.63"
     }, 
     "\u5bf6\u5c71\u7b2c\u4e8c\u6c34\u5eab": {
         "name": "\u5bf6\u5c71\u7b2c\u4e8c\u6c34\u5eab", 
@@ -197,6 +216,7 @@
         "percentage": "25.2", 
         "volumn": "794.88", 
         "updateAt": "2015-03-25(9\u6642)", 
-        "id": "reservoir6"
+        "id": "reservoir6", 
+        "baseAvailable": "3147.18"
     }
 }
