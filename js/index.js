@@ -27,7 +27,8 @@
          
          $('#'+id).siblings('.state')
                   .children('h6')
-                  .text('昨日水量下降：'+ netPercentageVar + '%');
+                  .text('昨日水量下降：'+ netPercentageVar + '% / '
+                      + '剩餘：' + Math.round(percentage/netPercentageVar) + '天');
          $('#'+id).siblings('.state').addClass('red');
        }
        else {
