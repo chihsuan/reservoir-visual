@@ -6,8 +6,11 @@
   var yyyy = today.getFullYear();
   var hh = today.getHours();
 
-  if (hh < 9) {
+  if (hh < 7) {
     hh = '0';
+  }
+  else if (hh < 9) {
+    hh = '6';
   }
   else if (hh < 15) {
     hh = '8';
