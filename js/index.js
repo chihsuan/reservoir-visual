@@ -1,6 +1,26 @@
 (function() {
 
-  d3.json("../data/data.json", function(error, data) {
+  var today = new Date();
+  var mm = addZero(today.getMonth()+1);
+  var dd = addZero(today.getDate());
+  var yyyy = today.getFullYear();
+  var hh = today.getHours();
+
+  if (hh < 9) {
+    hh = '0';
+  }
+  else if (hh < 15) {
+    hh = '9';
+  }
+  else if (hh < 20){
+    hh = '14';
+  }
+  else {
+    hh = '19';
+  }
+
+  d3.json('https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
+    yyyy + mm + dd + hh + '.json', function(error, data) {
     configs = {};
     for (reservoirName in data) {
        var percentage = data[reservoirName]['percentage'].toFixed(1);
@@ -92,6 +112,12 @@
       return 5000;
     }
   });
-
+  
+  function addZero(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
 
 })()
