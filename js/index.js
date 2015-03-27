@@ -9,7 +9,7 @@
   if (hh == 0) {
     hh = '0';
   }
-  if (hh < 7) {
+  else if (hh < 7) {
     hh = '1';
   }
   else if (hh < 9) {
