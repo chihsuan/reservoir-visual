@@ -14,18 +14,22 @@
     <title>台灣水庫即時水情</title>
     <link rel=stylesheet type="text/css" href="css/style.css">
     <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
 </head>
 <body>
-    <div class="topbar">
-      <h2 class="title">台灣水庫即時水情</h2>
+    <h4><a href="water.taiwanstat.com">台灣水庫即時水情</a></h4>
+    <nav id="menu" class="navigation">
+      <ul>
+        <li><a href="price.taiwanstat.com">台灣物價指數變化</a></li>
+      </ul>
+    </nav>
     <div class="fb-plugin">
       <div class="fb-like-box" data-href="https://www.facebook.com/statTaiwan?fref=ts" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
       <div class="fb-like" data-href="http://water.taiwanstat.com/" data-width="300px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
       <div class="links">
-        <a href="http://price.taiwanstat.com/">>> 台灣物價指數變化</a> /
-        <a href="https://github.com/chihsuan/reservoir-visual">Fork me on GitHub</a>
+        <button class="go-to" onclick="window.location.href='#reservoir0'">北部</button>
+        <button class="go-to" onclick="window.location.href='#reservoir4'">中部</button>
+        <button class="go-to" onclick="window.location.href='#reservoir12'">南部</button>
       </div>
     </div>
     <div class="note">
@@ -37,8 +41,8 @@
   <div class="reservoir">
     <span class="name"><h3>{{title}}</h3></span>
     <svg id="{{id}}" width="100%" height="250"></svg>
-    <span class="volumn"><h6>{{volumn}}萬立方公尺</h6></span>
-    <span class="state"><h6>萬立方公尺</h6></span>
+    <span class="volumn"><h5>{{volumn}}萬立方公尺</h5></span>
+    <span class="state"><h5>萬立方公尺</h5></span>
     <span class="updateAt">更新時間：{{updateAt}}</span>
   </div>
   {{/each}}
