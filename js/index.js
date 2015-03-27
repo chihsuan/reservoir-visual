@@ -37,7 +37,7 @@
       
        if (isNaN(netFlow)) {
           $('#'+id).siblings('.state')
-                  .children('h6')
+                  .children('h5')
                   .text('昨日水量狀態：待更新');
           $('#'+id).siblings('.state').removeClass();
        }
@@ -46,7 +46,7 @@
              parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2)
          
          $('#'+id).siblings('.state')
-                  .children('h6')
+                  .children('h5')
                   .text('昨日水量下降：'+ netPercentageVar + '% / '
                       + '剩餘：' + Math.round(percentage/netPercentageVar) + '天');
          $('#'+id).siblings('.state').addClass('red');
@@ -56,7 +56,7 @@
              parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2)
          
          $('#'+id).siblings('.state')
-                  .children('h6')
+                  .children('h5')
                   .text('昨日水量上升：'+ netPercentageVar + '%');
          $('#'+id).siblings('.state').addClass('blue');
        }
@@ -70,7 +70,7 @@
        setColor(configs[reservoirName], percentage);
 
        $('#'+id).siblings('.updateAt').html('更新時間：'+updateAt);
-       $('#'+id).siblings('.volumn').children('h6').text('有效蓄水量：'+volumn+'萬立方公尺');
+       $('#'+id).siblings('.volumn').children('h5').text('有效蓄水量：'+volumn+'萬立方公尺');
        loadLiquidFillGauge(id, percentage, configs[reservoirName]);
     }
 

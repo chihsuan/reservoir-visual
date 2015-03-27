@@ -46,17 +46,6 @@
                 "id": "reservoir3"
             }, 
             {
-                "name": "明德水庫", 
-                "title": "\u660e\u5fb7\u6c34\u5eab(\u82d7\u6817)", 
-                "daliyNetflow": 1.5899999999999999, 
-                "daliyInflow": "2.14", 
-                "daliyOverflow": "3.73", 
-                "percentage": "20.54", 
-                "volumn": "262.0316", 
-                "updateAt": "0000-00-00 (0時)", 
-                "id": "reservoir4"
-            }, 
-            {
                 "name": "寶山水庫", 
                 "title": "寶山水庫(新竹)", 
                 "daliyNetflow": 24.5, 
@@ -65,7 +54,7 @@
                 "percentage": "29.44", 
                 "volumn": "3399.5", 
                 "updateAt": "0000-00-00 (0時)", 
-                "id": "reservoir5"
+                "id": "reservoir4"
             }, 
             {
                 "name": "寶山第二水庫", 
@@ -75,6 +64,17 @@
                 "daliyOverflow": "125.08", 
                 "percentage": "46.67", 
                 "volumn": "7001.1", 
+                "updateAt": "0000-00-00 (0時)", 
+                "id": "reservoir5"
+            }, 
+             {
+                "name": "明德水庫", 
+                "title": "\u660e\u5fb7\u6c34\u5eab(\u82d7\u6817)", 
+                "daliyNetflow": 1.5899999999999999, 
+                "daliyInflow": "2.14", 
+                "daliyOverflow": "3.73", 
+                "percentage": "20.54", 
+                "volumn": "262.0316", 
                 "updateAt": "0000-00-00 (0時)", 
                 "id": "reservoir6"
             }, 
