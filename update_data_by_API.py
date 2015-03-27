@@ -4,6 +4,7 @@ import json
 import os
 import urllib2
 import sys
+import datetime
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(base_dir)
@@ -60,9 +61,13 @@ for name, reservoir in data.iteritems():
                 if reservoir_new['immediatePercentage'] == '--':
                     reservoir['percentage'] = (float(reservoir['volumn']) / \
                             float(reservoir['baseAvailable'])) * 100
-                else:
+                elif len(reservoir_new['immediatePercentage']) == 6:
                     reservoir['percentage'] = float(reservoir_new['immediatePercentage'][:-2])
+                else:
+                    reservoir['percentage'] = float(reservoir_new['immediatePercentage'][:-1])
             else:
                 reservoir['percentage'] = float(reservoir['percentage'])
 
-write_json('data/data.json', data)
+now = datetime.datetime.now()
+date = str(now).split(' ')[0].replace('-', '')
+write_json('data/data' + date + str(now.hour) + '.json', data)
