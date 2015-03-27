@@ -6,7 +6,7 @@
   var yyyy = today.getFullYear();
   var hh = today.getHours();
   var mm = today.getMinutes();
-  if (hh < 1 && mm > 5) {
+  if (hh == 0) {
     hh = '0';
   }
   if (hh < 7) {
