@@ -1,6 +1,6 @@
 html {
-    background: #eee;
     font-family: 'Noto Sans', 'sans-serif', 'Microsoft Jhenghei'; 
+    background: #eee;
 }
 body {
     margin: auto;
@@ -26,4 +26,21 @@ body {
 .fb-like.fb_iframe_widget {
     overflow: hidden;
     width: 330px;
+}
+.links {
+    position: relative;
+    padding: 10px;
+    padding-bottom: 9px;
+    margin: 30px 0 20px;
+    border-bottom: 1px solid #D2D2D2;
+}
+.data-src {
+    clear: right;
+}
+a {
+    color: #337ab7;
+    text-decoration: blink;
+}
+.note {
+    font-size: 14px;
 }

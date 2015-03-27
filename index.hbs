@@ -14,16 +14,25 @@
     <title>台灣水庫蓄水量</title>
     <link rel=stylesheet type="text/css" href="css/style.css">
     <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
 </head>
 <body>
-    <h2>台灣水庫有效蓄水量</h2><div class="data-src">資料來源:<a href="http://www.wra.gov.tw/">經濟部水利署</a></div>
-    <div>即時水情資料係自記儀器自動產生，未經人工完整檢驗，僅提供參考。</div>
-    <div>預測剩餘天數 = 即時有效蓄水量/昨日下降蓄水量。其結果僅提供參考。</div><br/>
+    <div class="topbar">
+      <h2 class="title">台灣水庫即時有效蓄水量</h2>
     <div class="fb-plugin">
       <div class="fb-like-box" data-href="https://www.facebook.com/statTaiwan?fref=ts" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
-      <div class="fb-like" data-href="http://water.taiwanstat.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+      <div class="fb-like" data-href="http://water.taiwanstat.com/" data-width="300px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
-		<a href="https://github.com/chihsuan/reservoir-visual"><img style="position: absolute; top: 0; right: 0; border: 0; width: 120px;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+      <div class="links">
+        <a href="http://price.taiwanstat.com/">>> 台灣物價指數變化</a> /
+        <a href="https://github.com/chihsuan/reservoir-visual">Fork me on GitHub</a>
+      </div>
+    </div>
+    <div class="note">
+      <li class="data-src">資料來源：<a href="http://www.wra.gov.tw/">經濟部水利署</a></li>
+      <li>即時水情資料係自記儀器自動產生，未經人工完整檢驗，僅提供參考。</li>
+      <li class="red">預測剩餘天數 = 即時有效蓄水量/昨日下降蓄水量。其結果僅提供參考。</li>
+    <div/>
   {{#each reservoirs}}
   <div class="reservoir">
     <span class="name"><h4>{{title}}</h4></span>
