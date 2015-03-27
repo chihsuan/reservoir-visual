@@ -1,19 +1,22 @@
 (function() {
 
   var today = new Date();
-  var mm = addZero(today.getMonth()+1);
+  var MM = addZero(today.getMonth()+1);
   var dd = addZero(today.getDate());
   var yyyy = today.getFullYear();
   var hh = today.getHours();
-
-  if (hh < 7) {
+  var mm = today.getMinutes();
+  if (hh == 0) {
     hh = '0';
   }
+  if (hh < 7) {
+    hh = '1';
+  }
   else if (hh < 9) {
-    hh = '7';
+    hh = '6';
   }
   else if (hh < 15) {
-    hh = '9';
+    hh = '8';
   }
   else if (hh < 20){
     hh = '14';
@@ -23,7 +26,7 @@
   }
 
   d3.json('https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
-    yyyy + mm + dd + hh + '.json', function(error, data) {
+    yyyy + MM + dd + hh + '.json', function(error, data) {
     configs = {};
     for (reservoirName in data) {
        var percentage = data[reservoirName]['percentage'].toFixed(1);
