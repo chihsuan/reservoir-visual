@@ -10,10 +10,10 @@
     hh = '0';
   }
   else if (hh < 9) {
-    hh = '6';
+    hh = '7';
   }
   else if (hh < 15) {
-    hh = '8';
+    hh = '9';
   }
   else if (hh < 20){
     hh = '14';
