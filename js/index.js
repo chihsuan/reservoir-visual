@@ -19,7 +19,7 @@
     hh = '10';
   }
   else if (hh < 15) {
-    hh = '11';
+    hh = '10';
   }
   else if (hh < 20){
     hh = '14';
