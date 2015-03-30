@@ -27,9 +27,9 @@
     }
   });*/
 
-  d3.json(url, function(error, data) {
+  d3.json(cdnUrl, function(error, data) {
     if (error) {
-      d3.json(cdnUrl, function(error, data) {
+      d3.json(url, function(error, data) {
         visualize(data);
       });
     }
