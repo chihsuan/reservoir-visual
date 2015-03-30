@@ -16,10 +16,10 @@
     hh = '6';
   }
   else if (hh < 12) {
-    hh = '10';
+    hh = '8';
   }
   else if (hh < 15) {
-    hh = '10';
+    hh = '11';
   }
   else if (hh < 20){
     hh = '14';
@@ -30,18 +30,20 @@
   var url = 'https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
     yyyy + MM + dd + hh + '.json';
 
-  //url = ''
-
-  /*$.ajax({
+  url = 'http://192.168.66.43:3000/';
+  $.ajax({
     url: url,
-    dataType: "json",
-    success: function (data) {
-     console.log(data); 
+    dataType: "jsonp",
+    success: function (resp) {
+     visualize(resp.data);
     }
+  });
+
+  /*d3.json(url, function(error, data) {
+    visualize(data);
   });*/
 
-  d3.json(url, function(error, data) {
-    console.log(error);
+  function visualize (data) {
     configs = {};
     for (reservoirName in data) {
        var percentage = data[reservoirName]['percentage'].toFixed(1);
@@ -132,7 +134,8 @@
       }
       return 5000;
     }
-  });
+  }
+  //);
   
   function addZero(i) {
     if (i < 10) {
