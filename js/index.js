@@ -19,10 +19,10 @@
     hh = '8';
   }
   else if (hh < 15) {
-    hh = '11';
+    hh = '13';
   }
   else if (hh < 20){
-    hh = '14';
+    hh = '13';
   }
   else {
     hh = '19';
@@ -30,18 +30,18 @@
   var url = 'https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
     yyyy + MM + dd + hh + '.json';
 
-  url = 'http://192.168.66.43:3000/';
-  $.ajax({
+  //url = 'http://192.168.66.43:3000/';
+  /*$.ajax({
     url: url,
     dataType: "jsonp",
     success: function (resp) {
      visualize(resp.data);
     }
-  });
-
-  /*d3.json(url, function(error, data) {
-    visualize(data);
   });*/
+
+  d3.json(url, function(error, data) {
+    visualize(data);
+  });
 
   function visualize (data) {
     configs = {};
