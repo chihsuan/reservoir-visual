@@ -17,9 +17,9 @@ def write_json(file_name, content):
     with open(file_name, 'w') as output_file:
         json.dump(content, output_file, indent=4)
 
-#api = 'http://127.0.0.1:10080/'
+api = 'http://127.0.0.1:10080/'
 api_today = 'http://127.0.0.1:10080/today'
-api = 'http://128.199.223.114:10080/'
+#api = 'http://128.199.223.114:10080/'
 
 data = read_json('data/data.json')
 
