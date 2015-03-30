@@ -30,6 +30,7 @@
   var url = 'https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
     yyyy + MM + dd + hh + '.json';
 
+  url = 'http://192.168.66.43:3000/';
   //url = 'http://192.168.66.43:3000/';
   /*$.ajax({
     url: url,
@@ -40,7 +41,7 @@
   });*/
 
   d3.json(url, function(error, data) {
-    visualize(data);
+    visualize(data.data);
   });
 
   function visualize (data) {
