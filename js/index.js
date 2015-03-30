@@ -16,7 +16,7 @@
     hh = '6';
   }
   else if (hh < 12) {
-    hh = '8';
+    hh = '10';
   }
   else if (hh < 15) {
     hh = '11';
