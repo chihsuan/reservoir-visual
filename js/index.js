@@ -27,9 +27,21 @@
   else {
     hh = '19';
   }
+  var url = 'https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
+    yyyy + MM + dd + hh + '.json';
 
-  d3.json('https://rawgit.com/chihsuan/reservoir-visual/data/data/data'+
-    yyyy + MM + dd + hh + '.json', function(error, data) {
+  //url = ''
+
+  /*$.ajax({
+    url: url,
+    dataType: "json",
+    success: function (data) {
+     console.log(data); 
+    }
+  });*/
+
+  d3.json(url, function(error, data) {
+    console.log(error);
     configs = {};
     for (reservoirName in data) {
        var percentage = data[reservoirName]['percentage'].toFixed(1);
