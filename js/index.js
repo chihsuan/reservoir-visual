@@ -6,31 +6,19 @@
   var yyyy = today.getFullYear();
   var hh = today.getHours();
   var mm = today.getMinutes();
-  if (hh == 0) {
-    hh = '0';
-  }
-  else if (hh < 7) {
-    hh = '1';
-  }
-  else if (hh < 9) {
-    hh = '6';
-  }
-  else if (hh < 12) {
-    hh = '8';
-  }
-  else if (hh < 15) {
-    hh = '13';
-  }
-  else if (hh < 20){
-    hh = '13';
+
+  if (mm < 30) {
+    mm = '0';
   }
   else {
-    hh = '19';
+    mm = '30';
   }
-  var url = 'https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
-    yyyy + MM + dd + hh + '.json';
+  
+  var url = 'https://rawgit.com/chihsuan/reservoir-visual/data/data/data'+
+    yyyy + MM + dd + hh + mm + '.json';
 
-  //url = 'http://192.168.66.43:3000/';
+  var cdnUrl = 'https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
+    yyyy + MM + dd + hh + mm + '.json';
   /*$.ajax({
     url: url,
     dataType: "jsonp",
@@ -40,7 +28,14 @@
   });*/
 
   d3.json(url, function(error, data) {
-    visualize(data);
+    if (error) {
+      d3.json(cdnUrl, function(error, data) {
+        visualize(data);
+      });
+    }
+    else {
+      visualize(data);
+    }
   });
 
   function visualize (data) {
