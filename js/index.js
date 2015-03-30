@@ -29,7 +29,7 @@
   cdnUrl = 'https://raw.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
     yyyy + MM + dd + hh + mm + '.json';
 
-  d3.json(cdnUrl, function(error, data) {
+  d3.json('../data/data.json', function(error, data) {
     if (error) {
       d3.json(url, function(error, data) {
         visualize(data);
