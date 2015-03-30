@@ -28,7 +28,7 @@
     hh = '19';
   }
 
-  d3.json('https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
+  d3.json('https://rawgit.com/chihsuan/reservoir-visual/data/data/data'+
     yyyy + MM + dd + hh + '.json', function(error, data) {
     configs = {};
     for (reservoirName in data) {
