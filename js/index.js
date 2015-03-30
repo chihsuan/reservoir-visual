@@ -26,6 +26,8 @@
      visualize(resp.data);
     }
   });*/
+  cdnUrl = 'https://raw.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
+    yyyy + MM + dd + hh + mm + '.json';
 
   d3.json(cdnUrl, function(error, data) {
     if (error) {
