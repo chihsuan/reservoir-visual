@@ -68,5 +68,12 @@ for name, reservoir in data.iteritems():
 
 now = datetime.datetime.now()
 date = str(now).split(' ')[0].replace('-', '')
-write_json('data/data' + date + str(now.hour) + '.json', data)
+if now.minute > 30:
+    minute = '0'
+    hour = now.hour + 1
+else:
+    minute = '30'
+    hour = now.hour 
+
+write_json('data/data' + date + str(hour) + minute +'.json', data)
 write_json('data/data.json', data)
