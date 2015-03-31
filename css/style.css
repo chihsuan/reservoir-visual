@@ -76,5 +76,9 @@ button:hover {
     border-color: #204d74;
 }
 iframe {
-    overflow-y: scroll !important;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; /*MAKES OVERFLOWN OBJECTS HAVE INERTIA SCROLLING*/
+    -webkit-transform: translateZ(0px); /*HELPS THE ABOVE WORK IN IOS5*/
 }
