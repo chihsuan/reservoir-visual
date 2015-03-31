@@ -75,3 +75,6 @@ button:hover {
     background-color: #286090;
     border-color: #204d74;
 }
+iframe {
+    overflow-y: scroll !important;
+}
