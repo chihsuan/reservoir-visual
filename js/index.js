@@ -1,43 +1,7 @@
 (function() {
 
-  var today = new Date();
-  var MM = addZero(today.getMonth()+1);
-  var dd = addZero(today.getDate());
-  var yyyy = today.getFullYear();
-  var hh = today.getHours();
-  var mm = today.getMinutes();
-
-  if (mm < 30) {
-    mm = '0';
-  }
-  else {
-    mm = '30';
-  }
-  
-  var url = 'https://rawgit.com/chihsuan/reservoir-visual/data/data/data'+
-    yyyy + MM + dd + hh + mm + '.json';
-
-  var cdnUrl = 'https://cdn.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
-    yyyy + MM + dd + hh + mm + '.json';
-  /*$.ajax({
-    url: url,
-    dataType: "jsonp",
-    success: function (resp) {
-     visualize(resp.data);
-    }
-  });*/
-  cdnUrl = 'https://raw.rawgit.com/chihsuan/reservoir-visual/data/data/data'+
-    yyyy + MM + dd + hh + mm + '.json';
-
-  d3.json('../data/data.json', function(error, data) {
-    if (error) {
-      d3.json(url, function(error, data) {
-        visualize(data);
-      });
-    }
-    else {
-      visualize(data);
-    }
+  d3.json('data.json', function(error, data) {
+    visualize(data);
   });
 
   function visualize (data) {
@@ -64,11 +28,27 @@
        else if (netFlow < 0) {
          netPercentageVar = ((-netFlow) / 
              parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2)
-         
+        
+         var usageDay = Math.round(percentage/netPercentageVar);
+         if (usageDay >= 60) {
+            usageDay = '預測剩餘天數：60天以上';
+         }
+         else if (usageDay >= 30) {
+            usageDay = '預測剩餘天數：30天-60天';
+            $('#'+id).siblings('.dueDay').addClass('red');
+         }
+         else {
+            usageDay = '預測剩餘天數：' + usageDay + '天';
+            $('#'+id).siblings('.dueDay').addClass('red');
+         }
+
+         $('#'+id).siblings('.dueDay')
+                  .children('h5')
+                  .text(usageDay);
+
          $('#'+id).siblings('.state')
                   .children('h5')
-                  .text('昨日水量下降：'+ netPercentageVar + '% / '
-                      + '剩餘：' + Math.round(percentage/netPercentageVar) + '天');
+                  .text('昨日水量下降：'+ netPercentageVar + '%');
          $('#'+id).siblings('.state').addClass('red');
        }
        else {

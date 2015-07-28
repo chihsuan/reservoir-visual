@@ -1,0 +1,32 @@
+body, html {
+    margin: 0; 
+    padding: 0;
+}
+.logo {
+    top: 5px;
+    position: relative;
+}
+
+.sites {
+    margin: 10px;
+}
+
+.headroom {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    background: #029B6C;
+    margin-bottom: 20px;
+    color: #FFF;
+}
+
+.official {
+    float: right;
+}
+
+.btn-sites {
+    margin: 10px;
+}
+.btn-sites .button {
+    margin: 10px;
+}

@@ -1,11 +1,13 @@
-html {
-    font-family: 'Noto Sans', 'sans-serif', 'Microsoft Jhenghei'; 
+html body {
+    font-family: 'Noto Sans', 'sans-serif', 'Microsoft Jhenghei' !important; 
     background: #eee;
 }
-body {
+.main {
     margin: auto;
-    width: 90%;
-    margin-top: 30px;
+    background: #eee;
+    width: 95%;
+    margin-top: 20px;
+    height: 100%;
 }
 .liquidFillGaugeText { 
     font-weight: bold; 
@@ -13,9 +15,23 @@ body {
 .reservoir {
     width: 20%;
     float: left;
-    padding: 10px;
     min-width: 250px;
     padding-bottom: 30px;
+    padding-top: 20px;
+    margin-left: 20px;
+    font-family: 'Noto Sans', 'sans-serif', 'Microsoft Jhenghei' !important; 
+}
+.reservoir span {
+    padding-top: 5px;
+    margin-top: 5px;
+    line-height: 2em;
+}
+.reservoir h5 {
+    margin-top: 5px;
+}
+.reservoir-wrap {
+    width: 95%;
+    margin: auto
 }
 .red {
     color: rgb(255, 119, 119);
@@ -74,17 +90,4 @@ button:hover {
     color: #fff;
     background-color: #286090;
     border-color: #204d74;
-}
-.scroll-wrapper {
-    overflow:scroll !important; 
-    -webkit-overflow-scrolling:touch !important;
-    overflow-y: scroll;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.scroll-wrapper iframe {
-  height: 100%;
-  width: 100%;
 }
