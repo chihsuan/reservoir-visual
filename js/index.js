@@ -1,6 +1,6 @@
 (function() {
 
-  d3.json('data.json', function(error, data) {
+  d3.json('http://chihsuan.github.io/reservoir-data/data.json', function(error, data) {
     visualize(data);
   });
 
