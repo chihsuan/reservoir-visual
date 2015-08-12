@@ -1,7 +1,10 @@
 (function() {
 
-  d3.json('http://chihsuan.github.io/reservoir-data/data.json', function(error, data) {
-    visualize(data);
+  var myFirebaseRef = new Firebase("https://realtaiwanstat.firebaseio.com");
+  myFirebaseRef.child("water").limitToLast(1).on("child_added", function(snapshot) {
+      var raw = snapshot.val();  
+      var data = JSON.parse(raw);
+      visualize(data);
   });
 
   function visualize (data) {
