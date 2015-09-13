@@ -1,10 +1,10 @@
 (function() {
 
-  /*var myFirebaseRef = new Firebase("https://realtaiwanstat.firebaseio.com");
+  var myFirebaseRef = new Firebase("https://realtaiwanstat.firebaseio.com");
   myFirebaseRef.child("water").limitToLast(1).on("child_added", function(snapshot) {
       var raw = snapshot.val();  
-      var data = JSON.parse(raw);*/
-  d3.json('http://chihsuan.github.io/reservoir-data/data.json', function(error, data) {
+      var data = JSON.parse(raw);
+  //d3.json('http://chihsuan.github.io/reservoir-data/data.json', function(error, data) {
       visualize(data);
   });
 
@@ -31,7 +31,7 @@
        }
        else if (netFlow < 0) {
          netPercentageVar = ((-netFlow) / 
-             parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2)
+            parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2);
         
          var usageDay = Math.round(percentage/netPercentageVar);
          if (usageDay >= 60) {
@@ -125,4 +125,4 @@
     return i;
   }
 
-})()
+})();
