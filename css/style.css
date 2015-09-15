@@ -105,3 +105,42 @@ footer {
 }
 
 
+main .mdl-card.author {
+  clear: both;
+  width: 50%;
+  min-width: 330px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  background: #fff;
+  border: none;
+  border-radius: .2857rem;
+  z-index: '';
+  height: 220px;
+  margin: 20px;
+}
+.author h4 {
+  color: #999999;
+  font-size: 20px;
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  width: 125px;
+
+}
+.author img {
+  float: left;
+  width: 120px;
+  height: 550px;
+}
+.author-info {
+  margin: 20px;
+  float: left;
+  width: 80%;
+}
+.author-info h5 {
+  font-size: 16px;
+  float: left;
+}
+
+
