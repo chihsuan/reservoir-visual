@@ -103,12 +103,11 @@ footer {
   bottom:0;
   width: 100%;
 }
-
 main .mdl-card.author {
   clear: both;
-  min-width: 360px;
+  min-width: 300px;
   max-width: 500px;
-  width: 30%;
+  width: 50%;
   margin: auto;
   background: white;
   padding: 20px;
@@ -131,21 +130,28 @@ main .mdl-card.author {
 }
 .author img {
   float: left;
-  height: 100px;
+  height: 80px;
   background: #f0f0f0;
   border: 1px solid #f0f0f0;
   padding: 5px;
 }
 .author-info {
   margin: 20px;
-  margin-left: 40px;
+  margin-left: 30px;
   float: left;
-  width: 150px;
+  width: 140px;
 }
 .author-info h5 {
   font-size: 16px;
   float: left;
+  color: #5a5556;
 }
 
+
+@media all and (max-width: 650px) {
+  .author img {
+      height: 60px;
+    }
+}
 
 
