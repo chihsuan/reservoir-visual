@@ -10,12 +10,12 @@
 
   function visualize (data) {
     configs = {};
-    for (reservoirName in data) {
-       var percentage = data[reservoirName]['percentage'].toFixed(1);
-       var updateAt = data[reservoirName]['updateAt'];
-       var volumn = data[reservoirName]['volumn'];
-       var id = data[reservoirName]['id'];
-       var netFlow = -parseFloat(data[reservoirName]['daliyNetflow']).toFixed(1);
+    for (var reservoirName in data) {
+       var percentage = parseFloat(data[reservoirName].percentage).toFixed(1);
+       var updateAt = data[reservoirName].updateAt;
+       var volumn = data[reservoirName].volumn;
+       var id = data[reservoirName].id;
+       var netFlow = -parseFloat(data[reservoirName].daliyNetflow).toFixed(1);
        var netPercentageVar;
        
        if (isNaN(percentage)) {
@@ -31,9 +31,13 @@
        }
        else if (netFlow < 0) {
          netPercentageVar = ((-netFlow) / 
-            parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2);
-        
+            parseFloat(data[reservoirName].baseAvailable)*100).toFixed(2);
+         
          var usageDay = Math.round(percentage/netPercentageVar);
+         if (data[reservoirName].percentage > 80 && netPercentageVar > 2) {
+            usageDay = 60; 
+         }
+        
          if (usageDay >= 60) {
             usageDay = '預測剩餘天數：60天以上';
          }
@@ -57,7 +61,7 @@
        }
        else {
          netPercentageVar = ((netFlow) / 
-             parseFloat(data[reservoirName]['baseAvailable'])*100).toFixed(2)
+             parseFloat(data[reservoirName].baseAvailable)*100).toFixed(2);
          
          $('#'+id).siblings('.state')
                   .children('h5')
