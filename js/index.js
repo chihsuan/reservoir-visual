@@ -120,7 +120,6 @@
       return 5000;
     }
   }
-  //);
   
   function addZero(i) {
     if (i < 10) {

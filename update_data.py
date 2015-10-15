@@ -17,11 +17,11 @@ def write_json(file_name, content):
     with open(file_name, 'w') as output_file:
         json.dump(content, output_file, indent=4)
 
-api = 'http://127.0.0.1:10080/'
+#api = 'http://127.0.0.1:10080/'
 api_today = 'http://127.0.0.1:10080/today'
-#api = 'http://128.199.223.114:10080/'
+api = 'http://128.199.223.114:10080/'
 
-data = read_json('data.json')
+data = read_json('data/data.json')
 
 response = urllib2.urlopen(api);
 try:
@@ -32,42 +32,43 @@ except e:
 
 for name, reservoir in data.iteritems():
     for reservoir_new in new_data['data']:
-        if name == reservoir_new['reservoirName']: #and reservoir['id'] != 'reservoir0':
+        if name == reservoir_new['reservoirName']:
+            print name, reservoir['id']
             reservoir['daliyInflow'] = reservoir_new['daliyInflow']
             reservoir['daliyOverflow'] = reservoir_new['daliyOverflow']
-            #print reservoir['daliyOverflow'], name
             if reservoir_new['baseAvailable'] != '--':
                 reservoir['baseAvailable'] = reservoir_new['baseAvailable'].replace(',', '')
             try:
-                reservoir['daliyNetflow'] = float(reservoir_new['daliyOverflow'].replace(',', '')) -\
-                        float(reservoir_new['daliyInflow'].replace(',', ''))
+                reservoir['daliyNetflow'] = float(reservoir_new['daliyOverflow']) -\
+                        float(reservoir_new['daliyInflow'])
+                print reservoir['daliyNetflow']
             except:
                 reservoir['daliyNetflow'] = '--'
 
-print '--today---'
 response = urllib2.urlopen(api_today);
 try:
     new_data = json.loads(response.read())
 except e:
     print e
     sys.exit(1)
+
 for name, reservoir in data.iteritems():
     for reservoir_new in new_data['data']:
-        if name == reservoir_new['reservoirName']: #and reservoir['id'] != 'reservoir0':
+        if name == reservoir_new['reservoirName']:
+            print name, reservoir['id'], reservoir_new['immediateTime']
             if reservoir_new['immediateStorage'] != '--':
                 reservoir['updateAt'] = reservoir_new['immediateTime']
-                #print reservoir_new
                 reservoir['volumn'] = reservoir_new['immediateStorage'].replace(',', '')
-                #print reservoir
-                #print name
                 if reservoir_new['immediatePercentage'] == '--':
                     reservoir['percentage'] = (float(reservoir['volumn']) / \
                             float(reservoir['baseAvailable'])) * 100
                 elif len(reservoir_new['immediatePercentage']) == 6:
                     reservoir['percentage'] = float(reservoir_new['immediatePercentage'][:-2])
-                elif reservoir_new['immediatePercentage']:
+                else:
                     reservoir['percentage'] = float(reservoir_new['immediatePercentage'][:-1])
             else:
                 reservoir['percentage'] = float(reservoir['percentage'])
 
-write_json('data.json', data)
+now = datetime.datetime.now()
+date = str(now).split(' ')[0].replace('-', '')
+write_json('data/data' + date + str(now.hour) + '.json', data)
