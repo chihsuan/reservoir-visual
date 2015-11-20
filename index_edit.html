@@ -40,7 +40,8 @@
           <li>即時水情資料係自記儀器自動產生，未經人工完整檢驗，僅提供參考。</li>
           <li>根據<a href="http://fhy.wra.gov.tw/ReservoirPage_2011/StorageCapacity.aspx">水利署網頁</a>公布，各項水庫資料由各水庫管理單位在每日輸入，更新時間不一致。（部分水庫星期六、日之資料則在星期一統一輸入）</li>
           <li class="red">預測剩餘天數 = 即時有效蓄水量/昨日下降蓄水量。因降雨、用水量隨時間變化，預測結果僅提供參考。</li>
-          <div>
+        </div>
+        
             <div class="reservoir-wrap">
               <div class="reservoir">
                 <span class="name"><h3>新山水庫(基隆)</h3></span>
@@ -203,20 +204,17 @@
                 <span class="updateAt">更新時間：0000-00-00 (0時)</span>
               </div>
             </div>
-
-          </div>
         </div>
         <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
         <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="js/liquidFillGauge.js" language="JavaScript"></script>
         <script src="js/index.js" language="JavaScript"></script>
-        <script src="/bower_components/semantic/dist/semantic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
-      </div>
+        <script src="/bower_components/semantic/dist/semantic.min.js" async></script>
       <div class="mdl-card mdl-shadow--2dp author"><h4><a href="http://taiwanstat_members.cannerapp.com/">About Author</a></h4>  <img class="ui circular image" src="http://real.taiwanstat.com/images/assert/background.png">      <div class="author-info"><h5>Chi-Hsuan Huang</h5></div>    </div>
 
-    </div></main>
+    </div>
+    </main>
 
     <div class="footer-mobile">
       <button class="scrollup mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--2dp" id="set">
@@ -244,8 +242,8 @@
           js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=600079286760117&version=v2.0";
           fjs.parentNode.insertBefore(js, fjs);
           }(document, 'script', 'facebook-jssdk'));</script>
-        <script src="http://real.taiwanstat.com/js/main_head.js"></script>
-        <script src="http://real.taiwanstat.com/js/main.min.js"></script>
+        <script src="http://real.taiwanstat.com/js/main_head.js" async></script>
+        <script src="http://real.taiwanstat.com/js/main.min.js" async></script>
       </div>
     </body>
   </html>
