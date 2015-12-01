@@ -77,7 +77,7 @@
        configs[reservoirName].waveCount = setWavaCount(percentage);
        setColor(configs[reservoirName], percentage);
 
-       $('#'+id).siblings('.updateAt').html('更新時間：'+updateAt);
+       $('#'+id).siblings('.updateAt').html('<h5>更新時間：'+updateAt+'</h5>');
        $('#'+id).siblings('.volumn').children('h5').text('有效蓄水量：'+volumn+'萬立方公尺');
        loadLiquidFillGauge(id, percentage, configs[reservoirName]);
     }
