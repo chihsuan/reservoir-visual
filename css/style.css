@@ -8,6 +8,7 @@ html body {
   min-height: 450px;
   float: left;
   min-width: 250px;
+  width: 250px;
   margin-left: 20px;
 }
 .reservoir svg {
