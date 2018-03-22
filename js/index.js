@@ -1,11 +1,7 @@
 (function() {
 
-  //var myFirebaseRef = new Firebase("https://realtaiwanstat.firebaseio.com");
-  //myFirebaseRef.child("water").limitToLast(1).on("child_added", function(snapshot) {
-  //    var raw = snapshot.val();  
-  //    var data = JSON.parse(raw);
-  d3.json('http://chihsuan.github.io/data/data.json', function(error, data) {
-      visualize(data);
+  d3.json('https://www.taiwanstat.com/waters/latest', function(error, data) {
+      visualize(data[0]);
   });
 
   function visualize (data) {
