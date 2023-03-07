@@ -28,27 +28,7 @@
        else if (netFlow < 0) {
          netPercentageVar = ((-netFlow) / 
             parseFloat(data[reservoirName].baseAvailable)*100).toFixed(2);
-         
-         var usageDay = Math.round(percentage/netPercentageVar);
-         if (data[reservoirName].percentage > 80 && netPercentageVar > 2) {
-            usageDay = 60; 
-         }
-        
-         if (usageDay >= 60) {
-            usageDay = '預測剩餘天數：60天以上';
-         }
-         else if (usageDay >= 30) {
-            usageDay = '預測剩餘天數：30天-60天';
-            $('#'+id).siblings('.dueDay').addClass('red');
-         }
-         else {
-            usageDay = '預測剩餘天數：' + usageDay + '天';
-            $('#'+id).siblings('.dueDay').addClass('red');
-         }
 
-         $('#'+id).siblings('.dueDay')
-                  .children('h5')
-                  .text(usageDay);
 
          $('#'+id).siblings('.state')
                   .children('h5')
