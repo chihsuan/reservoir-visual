@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import json
 import os
+import time
 import urllib.request
 import sys
 
@@ -16,17 +17,23 @@ def write_json(file_name, content):
     with open(file_name, 'w') as output_file:
         json.dump(content, output_file, indent=4, ensure_ascii=False)
 
+def fetch_json(url, retries=3, delay=5):
+    for attempt in range(retries):
+        response = urllib.request.urlopen(url)
+        data = json.loads(response.read().decode('utf-8'))
+        if 'data' in data:
+            return data
+        print(f"No 'data' key in response from {url}, retrying ({attempt + 1}/{retries})...")
+        time.sleep(delay)
+    print(f"Failed to get valid data from {url}")
+    sys.exit(1)
+
 api = 'http://127.0.0.1:10080/'
 api_today = 'http://127.0.0.1:10080/today'
 
 data = read_json('data/data.json')
 
-response = urllib.request.urlopen(api)
-try:
-    new_data = json.loads(response.read().decode('utf-8'))
-except Exception as e:
-    print(e)
-    sys.exit(1)
+new_data = fetch_json(api)
 
 for name, reservoir in data.items():
     for reservoir_new in new_data['data']:
@@ -43,12 +50,7 @@ for name, reservoir in data.items():
             except:
                 reservoir['daliyNetflow'] = '--'
 
-response = urllib.request.urlopen(api_today)
-try:
-    new_data = json.loads(response.read().decode('utf-8'))
-except Exception as e:
-    print(e)
-    sys.exit(1)
+new_data = fetch_json(api_today)
 
 for name, reservoir in data.items():
     for reservoir_new in new_data['data']:
