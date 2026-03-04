@@ -1,7 +1,7 @@
 (function() {
 
-  d3.json('https://www.taiwanstat.com/waters/latest', function(error, data) {
-      visualize(data[0]);
+  d3.json('data/data.json', function(error, data) {
+      visualize(data);
   });
 
   function visualize (data) {
