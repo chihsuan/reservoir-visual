@@ -2,8 +2,7 @@ name: Update Reservoir Data
 
 on:
   schedule:
-    - cron: '0 1 * * *'   # 09:00 Taiwan time (UTC+8)
-    - cron: '0 13 * * *'  # 21:00 Taiwan time (UTC+8)
+    - cron: '0 * * * *'   # Every hour
   workflow_dispatch:
 
 permissions:
