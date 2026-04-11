@@ -78,9 +78,9 @@
     },
     "新山水庫": {
         "name": "新山水庫",
-        "daliyNetflow": "--",
-        "daliyInflow": "--",
-        "daliyOverflow": "--",
+        "daliyNetflow": 1.0299999999999998,
+        "daliyInflow": "1.02",
+        "daliyOverflow": "2.05",
         "percentage": 97.1,
         "volumn": "968.01",
         "updateAt": "2026-04-10(7時)",
