@@ -5,8 +5,8 @@
         "daliyInflow": "0.40",
         "daliyOverflow": "9.50",
         "percentage": 52.7,
-        "volumn": "1374.00",
-        "updateAt": "2026-04-27(16時)",
+        "volumn": "1373.00",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir18",
         "baseAvailable": "2603.66"
     },
@@ -17,7 +17,7 @@
         "daliyOverflow": "189.40",
         "percentage": 23.7,
         "volumn": "28.54",
-        "updateAt": "2026-04-27(16時)",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir8",
         "baseAvailable": "120.21"
     },
@@ -26,9 +26,9 @@
         "daliyNetflow": -12.91,
         "daliyInflow": "16.41",
         "daliyOverflow": "3.50",
-        "percentage": 87.4,
-        "volumn": "1086.68",
-        "updateAt": "2026-04-27(16時)",
+        "percentage": 87.1,
+        "volumn": "1082.35",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir5",
         "baseAvailable": "1242.28"
     },
@@ -39,7 +39,7 @@
         "daliyOverflow": "6.91",
         "percentage": 14.8,
         "volumn": "220.00",
-        "updateAt": "2026-04-27(16時)",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir17",
         "baseAvailable": "1480.05"
     },
@@ -105,7 +105,7 @@
         "daliyOverflow": "24.00",
         "percentage": 15.5,
         "volumn": "7560.00",
-        "updateAt": "2026-04-27(16時)",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir14",
         "baseAvailable": "48654.00"
     },
@@ -125,9 +125,9 @@
         "daliyNetflow": -70.33,
         "daliyInflow": "108.00",
         "daliyOverflow": "37.67",
-        "percentage": 82.1,
-        "volumn": "2114.23",
-        "updateAt": "2026-04-27(16時)",
+        "percentage": 82.4,
+        "volumn": "2120.40",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir10",
         "baseAvailable": "2572.22"
     },
@@ -148,8 +148,8 @@
         "daliyInflow": "140.44",
         "daliyOverflow": "111.93",
         "percentage": 68.4,
-        "volumn": "14046.57",
-        "updateAt": "2026-04-27(16時)",
+        "volumn": "14039.48",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir2",
         "baseAvailable": "20526.00"
     },
@@ -169,9 +169,9 @@
         "daliyNetflow": -65.83,
         "daliyInflow": "160.85",
         "daliyOverflow": "95.02",
-        "percentage": 74.4,
-        "volumn": "13721.10",
-        "updateAt": "2026-04-27(16時)",
+        "percentage": 74.3,
+        "volumn": "13707.87",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir7",
         "baseAvailable": "18432.88"
     },
@@ -182,7 +182,7 @@
         "daliyOverflow": "186.74",
         "percentage": 89.4,
         "volumn": "33097.68",
-        "updateAt": "2026-04-27(16時)",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir1",
         "baseAvailable": "36997.60"
     },
@@ -192,8 +192,8 @@
         "daliyInflow": "103.51",
         "daliyOverflow": "59.79",
         "percentage": 47.0,
-        "volumn": "5435.99",
-        "updateAt": "2026-04-27(16時)",
+        "volumn": "5433.26",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir6",
         "baseAvailable": "11548.60"
     },
@@ -202,9 +202,9 @@
         "daliyNetflow": -97.36999999999999,
         "daliyInflow": "113.96",
         "daliyOverflow": "16.59",
-        "percentage": 66.8,
-        "volumn": "8589.52",
-        "updateAt": "2026-04-27(16時)",
+        "percentage": 65.6,
+        "volumn": "8435.98",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir9",
         "baseAvailable": "12846.14"
     },
@@ -214,8 +214,8 @@
         "daliyInflow": "42.61",
         "daliyOverflow": "20.29",
         "percentage": 69.6,
-        "volumn": "2355.49",
-        "updateAt": "2026-04-27(16時)",
+        "volumn": "2356.54",
+        "updateAt": "2026-04-27(18時)",
         "id": "reservoir4",
         "baseAvailable": "3383.71"
     },
@@ -226,8 +226,8 @@
         "daliyOverflow": "14.52",
         "baseAvailable": "5041.00",
         "daliyNetflow": 8.559999999999999,
-        "updateAt": "2026-04-27(16時)",
-        "volumn": "1491.99",
-        "percentage": 29.6
+        "updateAt": "2026-04-27(18時)",
+        "volumn": "1489.73",
+        "percentage": 29.5
     }
 }
