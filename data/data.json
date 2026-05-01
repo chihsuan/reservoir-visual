@@ -1,10 +1,10 @@
 {
     "牡丹水庫": {
         "name": "牡丹水庫",
-        "daliyNetflow": "--",
-        "daliyInflow": "--",
-        "daliyOverflow": "--",
-        "percentage": 51.15875344707066,
+        "daliyNetflow": 9.86,
+        "daliyInflow": "0.34",
+        "daliyOverflow": "10.20",
+        "percentage": 51.1,
         "volumn": "1332.00",
         "updateAt": "2026-05-01(23時)",
         "id": "reservoir18",
@@ -15,7 +15,7 @@
         "daliyNetflow": 3.8000000000000114,
         "daliyInflow": "164.10",
         "daliyOverflow": "167.90",
-        "percentage": 22.7,
+        "percentage": 24.5,
         "volumn": "27.30",
         "updateAt": "2026-05-01(23時)",
         "id": "reservoir8",
