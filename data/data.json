@@ -223,9 +223,9 @@
         "name": "湖山水庫",
         "id": "reservoir19",
         "daliyInflow": "2.16",
-        "daliyOverflow": "15.52",
+        "daliyOverflow": "15.71",
         "baseAvailable": "5041.00",
-        "daliyNetflow": 13.36,
+        "daliyNetflow": 13.55,
         "updateAt": "2026-05-10(23時)",
         "volumn": "1329.99",
         "percentage": 26.3
