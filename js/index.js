@@ -3,6 +3,7 @@
   // 視覺化模式狀態
   var sizeMode = 'uniform';   // 'uniform' = 統一大小（預設）, 'capacity' = 依容量縮放
   var sortMode = 'default';   // 'default' = 原始（地區）順序, 'capacity' = 依容量大小排序
+  var barScale = 'log';       // 長條圖軸：'log' = 對數（小水庫也看得到）, 'linear' = 線性（真實比例）
 
   // 依容量縮放參數（方案 A，採 0.5/40：面積等比容量、最小直徑下限）
   var MAX_D = 230;  // 最大水圈直徑（px），需小於卡片寬度 250
@@ -19,6 +20,7 @@
     prepare(data);
     bindControls();
     render();
+    renderBars();
   });
 
   // 讀資料、填入文字、建立每座水庫的 gauge 設定（只做一次）
@@ -66,10 +68,15 @@
       $('#'+id).siblings('.updateAt').html('<h5>更新時間：'+updateAt+'</h5>');
       $('#'+id).siblings('.volumn').html('<h5>有效蓄水量：'+volumn+'萬立方公尺</h5><h5>有效庫容量：'+baseAvailable+'萬立方公尺</h5>');
 
+      var volNum = parseFloat(volumn);
       reservoirs.push({
         id: id,
+        name: reservoirName,
         percentage: percentage,
         capacity: parseFloat(baseAvailable),
+        volume: isNaN(volNum) ? 0 : volNum,
+        volStr: volumn,
+        capStr: baseAvailable,
         config: config,
         card: document.getElementById(id).parentNode
       });
@@ -124,6 +131,39 @@
     return Math.max(MIN_D, Math.round(d));
   }
 
+  // 長條圖刻度：log（小水庫也看得到）或 linear（真實比例）
+  function barWidth(v) {
+    if (v <= 0) { return 0; }
+    if (barScale === 'linear') { return v / capMax * 100; }
+    var lo = Math.log(10), hi = Math.log(capMax); // 對數軸下限 10 萬噸
+    return Math.max(0, (Math.log(v) - lo) / (hi - lo) * 100);
+  }
+
+  // 依實際蓄水量由多到少排序，繪製長條（深藍＝蓄水、淺藍＝總容量）
+  function renderBars() {
+    var list = document.getElementById('barlist');
+    if (!list) { return; }
+    var sorted = reservoirs.slice().sort(function(a, b) { return b.volume - a.volume; });
+    list.innerHTML = sorted.map(function(r) {
+      var capW = barWidth(r.capacity).toFixed(2);
+      var volW = barWidth(r.volume).toFixed(2);
+      var low = r.percentage < 25 ? ' low' : '';
+      return '<div class="bar-row">' +
+        '<div class="bname">' + r.name + '</div>' +
+        '<div class="btrack">' +
+          '<div class="bcap" style="width:' + capW + '%"></div>' +
+          '<div class="bfill' + low + '" style="width:' + volW + '%"></div>' +
+        '</div>' +
+        '<div class="bval">' + fmtNum(r.volStr) + ' <span class="cap">/ ' + fmtNum(r.capStr) + '</span></div>' +
+      '</div>';
+    }).join('');
+  }
+
+  function fmtNum(s) {
+    var n = Number(s);
+    return isNaN(n) ? s : n.toLocaleString();
+  }
+
   // 切換鈕事件
   function bindControls() {
     var controls = document.querySelector('.view-controls');
@@ -144,6 +184,17 @@
       }
       render();
     });
+
+    var barControls = document.querySelector('.bars-controls');
+    if (barControls) {
+      barControls.addEventListener('click', function(e) {
+        var btn = e.target.closest('button');
+        if (!btn || !btn.dataset.barscale) { return; }
+        barScale = btn.dataset.barscale;
+        setActive(barControls, 'barscale', barScale);
+        renderBars();
+      });
+    }
   }
 
   function setActive(controls, group, value) {

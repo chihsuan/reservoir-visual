@@ -53,7 +53,8 @@ discussion {
   color: #555;
   margin-right: 8px;
 }
-.view-controls button {
+.view-controls button,
+.bars-controls button {
   color: #337ab7;
   background-color: #fff;
   border: 1px solid #337ab7;
@@ -68,20 +69,23 @@ discussion {
   -ms-user-select: none;
   user-select: none;
 }
-.view-controls button:hover {
+.view-controls button:hover,
+.bars-controls button:hover {
   background-color: #eef5fb;
   color: #337ab7;
   border-color: #337ab7;
 }
 /* 地區跳轉與啟用中的切換鈕：實心藍（與其他切換鈕同一家族） */
 .view-controls button.active,
-.view-controls button.go-to {
+.view-controls button.go-to,
+.bars-controls button.active {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
 }
 .view-controls button.active:hover,
-.view-controls button.go-to:hover {
+.view-controls button.go-to:hover,
+.bars-controls button.active:hover {
   color: #fff;
   background-color: #286090;
   border-color: #204d74;
@@ -138,6 +142,74 @@ button:hover {
   line-height: 1.7;
 }
 
+/* 排序長條圖（方案 B）：用長度通道精準比較各水庫實際蓄水量 */
+.bars-section {
+  margin: 40px 0 48px;
+}
+.bars-title {
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+.bars-legend {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 12px;
+}
+.bars-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+  font-size: 13px;
+}
+.bar-row .bname {
+  width: 96px;
+  flex: none;
+  text-align: right;
+  color: #333;
+}
+.bar-row .btrack {
+  position: relative;
+  flex: 1;
+  height: 20px;
+  background: #eef2f6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar-row .bcap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #cdeaf7;
+}
+.bar-row .bfill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #178BCA;
+}
+.bar-row .bfill.low {
+  background: #FF7777;
+}
+.bar-row .bval {
+  width: 180px;
+  flex: none;
+  color: #777;
+  font-variant-numeric: tabular-nums;
+}
+.bar-row .bval .cap {
+  color: #b0bcc6;
+}
+
 /* 平板（含 iPad Pro 直式 1024）：控制列每組各自一行（標籤與按鈕同行、按鈕自然寬度） */
 @media (max-width: 1024px) {
   .view-controls {
@@ -162,6 +234,7 @@ button:hover {
   .view-controls,
   .note,
   .reservoir-wrap,
+  .bars-section,
   .mdl-card.author {
     max-width: 340px !important;
     margin-left: auto;
@@ -169,6 +242,21 @@ button:hover {
     padding-left: 16px;
     padding-right: 16px;
     box-sizing: border-box;
+  }
+  .bars-controls button {
+    flex: 1 1 0;
+    min-height: 40px;
+  }
+  .bar-row {
+    gap: 6px;
+    font-size: 12px;
+  }
+  .bar-row .bname {
+    width: 60px;
+  }
+  .bar-row .bval {
+    width: 96px;
+    font-size: 11px;
   }
   .license__wrapper {
     margin: 0;

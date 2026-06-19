@@ -212,6 +212,18 @@
                         <div class="updateAt">更新時間：0000-00-00 (0時)</div>
                     </div>
                 </div>
+
+                <div class="bars-section">
+                    <h3 class="bars-title">各水庫實際蓄水量比較</h3>
+                    <p class="bars-legend">深藍＝實際蓄水量、淺藍＝總容量；低於 25% 以紅色表示。依蓄水量由多到少排序。</p>
+                    <div class="bars-controls">
+                        <span class="view-controls__label">數量級：</span>
+                        <button data-barscale="log" class="active">對數軸（小水庫也看得到）</button>
+                        <button data-barscale="linear">線性軸（真實比例）</button>
+                    </div>
+                    <div id="barlist"></div>
+                </div>
+
                 <ul class="note sml-hide">
                     <li class="data-src">資料來源：<a href="http://www.wra.gov.tw/">經濟部水利署</a></li>
                     <li>即時水情資料係自記儀器自動產生，未經人工完整檢驗，僅提供參考。</li>
