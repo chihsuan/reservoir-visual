@@ -44,17 +44,24 @@
                         <div class="fb-like" data-href="http://water.taiwanstat.com/" data-width="300px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                     </div>
                 </div>
-                <div class="links">
-                    <button class="go-to" onclick="window.location.href='#reservoir1'">北部</button>
-                    <button class="go-to" onclick="window.location.href='#reservoir6'">中部</button>
-                    <button class="go-to" onclick="window.location.href='#reservoir12'">南部</button>
+                <div class="view-controls">
+                    <div class="view-controls__group">
+                        <span class="view-controls__label">快速跳轉：</span>
+                        <button class="go-to" onclick="window.location.href='#reservoir1'">北部</button>
+                        <button class="go-to" onclick="window.location.href='#reservoir6'">中部</button>
+                        <button class="go-to" onclick="window.location.href='#reservoir12'">南部</button>
+                    </div>
+                    <div class="view-controls__group">
+                        <span class="view-controls__label">視覺大小：</span>
+                        <button data-size="uniform" class="active">統一大小</button>
+                        <button data-size="capacity">依容量縮放</button>
+                    </div>
+                    <div class="view-controls__group">
+                        <span class="view-controls__label">排序：</span>
+                        <button data-sort="default" class="active">預設（地區）</button>
+                        <button data-sort="capacity">依容量大小</button>
+                    </div>
                 </div>
-                <ul class="note sml-hide">
-                    <li class="data-src">資料來源：<a href="http://www.wra.gov.tw/">經濟部水利署</a></li>
-                    <li>即時水情資料係自記儀器自動產生，未經人工完整檢驗，僅提供參考。</li>
-                    <li>根據<a href="http://fhy.wra.gov.tw/ReservoirPage_2011/StorageCapacity.aspx">水利署網頁</a>公布，各項水庫資料由各水庫管理單位在每日輸入，更新時間不一致。（部分水庫星期六、日之資料則在星期一統一輸入）</li>
-                    <li class="red">預測剩餘天數 = 即時有效蓄水量/昨日下降蓄水量。因降雨、用水量隨時間變化，預測結果僅提供參考。</li>
-                </ul>
 
                 <div class="reservoir-wrap">
                     <div class="reservoir">
@@ -205,6 +212,12 @@
                         <div class="updateAt">更新時間：0000-00-00 (0時)</div>
                     </div>
                 </div>
+                <ul class="note sml-hide">
+                    <li class="data-src">資料來源：<a href="http://www.wra.gov.tw/">經濟部水利署</a></li>
+                    <li>即時水情資料係自記儀器自動產生，未經人工完整檢驗，僅提供參考。</li>
+                    <li>根據<a href="http://fhy.wra.gov.tw/ReservoirPage_2011/StorageCapacity.aspx">水利署網頁</a>公布，各項水庫資料由各水庫管理單位在每日輸入，更新時間不一致。（部分水庫星期六、日之資料則在星期一統一輸入）</li>
+                    <li class="red">預測剩餘天數 = 即時有效蓄水量/昨日下降蓄水量。因降雨、用水量隨時間變化，預測結果僅提供參考。</li>
+                </ul>
             </div>
             <div class="mdl-card mdl-shadow--2dp author">
                 <h4><a href="http://taiwanstat_members.cannerapp.com/">About Author</a></h4>

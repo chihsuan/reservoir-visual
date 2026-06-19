@@ -1,18 +1,17 @@
 html body {
   background: #eee;
 }
+/* 隱藏遠端 main.js 注入的「數據討論區」（FB 留言）區塊 */
+discussion {
+  display: none;
+}
 .liquidFillGaugeText { 
   font-weight: bold; 
 }
-.reservoir {
-  min-height: 450px;
-  float: left;
-  min-width: 250px;
-  width: 250px;
-  margin-left: 20px;
-}
 .reservoir svg {
-  margin: 10px 5px;
+  display: block;
+  margin: 10px auto;
+  max-width: 230px;
 }
 .name {
   text-align: center;
@@ -32,19 +31,66 @@ html body {
 }
 .reservoir-wrap {
   width: 100%;
-  margin: 30px auto
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px 20px;
+}
+.view-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 28px;
+  padding: 12px 20px;
+  margin: 10px 0 0;
+}
+.view-controls__group {
+  display: flex;
+  align-items: center;
+}
+.view-controls__label {
+  font-size: 14px;
+  color: #555;
+  margin-right: 8px;
+}
+.view-controls button {
+  color: #337ab7;
+  background-color: #fff;
+  border: 1px solid #337ab7;
+  border-radius: 4px;
+  padding: 6px 14px;
+  margin-right: 8px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.view-controls button:hover {
+  background-color: #eef5fb;
+  color: #337ab7;
+  border-color: #337ab7;
+}
+/* 地區跳轉與啟用中的切換鈕：實心藍（與其他切換鈕同一家族） */
+.view-controls button.active,
+.view-controls button.go-to {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.view-controls button.active:hover,
+.view-controls button.go-to:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
 }
 .red {
   color: rgb(255, 119, 119);
 }
 .blue {
   color: rgb(23, 139, 202);
-}
-.links {
-  position: relative;
-  padding: 10px;
-  padding-bottom: 9px;
-  margin: 10px 0 20px;
 }
 .data-src {
   clear: right;
@@ -55,31 +101,9 @@ a {
 }
 .note {
   font-size: 14px;
-}
-.links button {
-  margin-left: 20px;
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
+  padding-left: 20px;
+  margin: 10px 0;
+  list-style-position: inside;
 }
 button:hover {
   color: #fff;
@@ -88,4 +112,104 @@ button:hover {
 }
 .reservoir h3 {
   font-size: 18px;
+}
+/* footer 對比：深底(#424242)上用較亮的文字與連結色，達 WCAG AA */
+.mdl-mini-footer {
+  color: #e0e0e0;
+}
+.mdl-mini-footer a,
+.footer_msg a {
+  color: #90caf9;
+}
+.mdl-mini-footer a:hover,
+.footer_msg a:hover {
+  color: #bbdefb;
+  text-decoration: underline;
+}
+/* 作者卡：貼合內容寬度、去掉多餘空白（遠端 CSS 優先序較高，需 !important 覆寫） */
+.mdl-card.author {
+  min-width: 0 !important;
+  max-width: 100%;
+  min-height: 0;
+}
+/* 授權區：限制行寬便於閱讀，與內容左緣一致 */
+.license__wrapper {
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+/* 平板（含 iPad Pro 直式 1024）：控制列每組各自一行（標籤與按鈕同行、按鈕自然寬度） */
+@media (max-width: 1024px) {
+  .view-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 20px;
+  }
+  .view-controls__group {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .view-controls button {
+    margin-right: 0;
+  }
+}
+
+/* 手機：控制列／note／水庫共用同一個置中窄欄（欄的左右留白＝inline space）；
+   欄內文字一律靠左、圓置中 → 對齊、平衡、有呼吸感 */
+@media (max-width: 600px) {
+  .view-controls,
+  .note,
+  .reservoir-wrap,
+  .mdl-card.author {
+    max-width: 340px !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+  .license__wrapper {
+    margin: 0;
+    padding: 0;
+    max-width: 340px;
+  }
+  .view-controls {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .view-controls__label {
+    flex-basis: 100%;
+    margin-bottom: 2px;
+    font-weight: 600;
+  }
+  .view-controls button {
+    flex: 1 1 0;
+    min-height: 40px;
+    padding: 8px 10px;
+  }
+  .note {
+    font-size: 13px;
+  }
+  .reservoir-wrap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  /* 圓填滿窄欄，與下方文字寬度相近 → 卡片更平衡 */
+  .reservoir svg {
+    max-width: 100%;
+  }
+  .reservoir h5 {
+    left: 0;
+  }
+  /* 作者卡與授權區：跟著窄欄置中、不再溢出 */
+  .mdl-card.author {
+    min-width: 0;
+    display: block;
+    width: 100% !important;
+  }
+  .license__wrapper {
+    font-size: 13px;
+  }
 }
