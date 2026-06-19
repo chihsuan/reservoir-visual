@@ -23,7 +23,10 @@ html body {
   line-height: 2em;
 }
 .reservoir h5 {
+  font-size: 16px;
+  font-weight: normal;
   margin-top: 5px;
+  margin-bottom: 0;
   position: relative;
   left: 20px;
 }
@@ -86,8 +89,3 @@ button:hover {
 .reservoir h3 {
   font-size: 18px;
 }
-.reservoir h5 {
-  font-size: 16px;
-  font-weight: normal;
-}
-

@@ -10,6 +10,7 @@
        var percentage = parseFloat(data[reservoirName].percentage).toFixed(1);
        var updateAt = data[reservoirName].updateAt;
        var volumn = data[reservoirName].volumn;
+       var baseAvailable = data[reservoirName].baseAvailable;
        var id = data[reservoirName].id;
        var netFlow = -parseFloat(data[reservoirName].daliyNetflow).toFixed(1);
        var netPercentageVar;
@@ -54,7 +55,7 @@
        setColor(configs[reservoirName], percentage);
 
        $('#'+id).siblings('.updateAt').html('<h5>更新時間：'+updateAt+'</h5>');
-       $('#'+id).siblings('.volumn').children('h5').text('有效蓄水量：'+volumn+'萬立方公尺');
+       $('#'+id).siblings('.volumn').html('<h5>有效蓄水量：'+volumn+'萬立方公尺</h5><h5>有效庫容量：'+baseAvailable+'萬立方公尺</h5>');
        loadLiquidFillGauge(id, percentage, configs[reservoirName]);
     }
 
