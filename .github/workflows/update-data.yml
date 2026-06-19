@@ -17,40 +17,10 @@ jobs:
         with:
           ref: gh-pages
 
-      - name: Checkout TaiwanReservoirAPI
-        uses: actions/checkout@v4
-        with:
-          repository: chihsuan/TaiwanReservoirAPI
-          path: TaiwanReservoirAPI
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-
-      - name: Install API dependencies
-        run: cd TaiwanReservoirAPI && npm install
-
-      - name: Start API server and warm up
-        run: |
-          cd TaiwanReservoirAPI && node app.js &
-          for i in $(seq 1 30); do
-            if curl -s http://127.0.0.1:10080/ > /dev/null 2>&1; then
-              echo "API server is ready"
-              break
-            fi
-            echo "Waiting for API server... ($i)"
-            sleep 2
-          done
-          echo "Warming up API (first request triggers scraping)..."
-          curl -s http://127.0.0.1:10080/ > /dev/null
-          curl -s http://127.0.0.1:10080/today > /dev/null
-          sleep 10
 
       - name: Update reservoir data
         run: python3 update_data.py
