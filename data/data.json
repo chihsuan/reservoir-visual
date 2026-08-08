@@ -4,9 +4,9 @@
         "daliyNetflow": -9.0,
         "daliyInflow": "23.04",
         "daliyOverflow": "14.04",
-        "percentage": 87.26,
-        "volumn": "2272.00",
-        "updateAt": "2026-08-09(04時)",
+        "percentage": 87.3,
+        "volumn": "2273.00",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir18",
         "baseAvailable": "2603.66"
     },
@@ -17,7 +17,7 @@
         "daliyOverflow": "705.90",
         "percentage": 29.12,
         "volumn": "35.00",
-        "updateAt": "2026-08-09(04時)",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir8",
         "baseAvailable": "111.12"
     },
@@ -26,9 +26,9 @@
         "daliyNetflow": 12.49,
         "daliyInflow": "4.29",
         "daliyOverflow": "16.78",
-        "percentage": 77.44,
-        "volumn": "962.05",
-        "updateAt": "2026-08-09(04時)",
+        "percentage": 77.67,
+        "volumn": "964.83",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir5",
         "baseAvailable": "1242.28"
     },
@@ -37,9 +37,9 @@
         "daliyNetflow": -0.97,
         "daliyInflow": "21.02",
         "daliyOverflow": "20.05",
-        "percentage": 0.41,
-        "volumn": "6.00",
-        "updateAt": "2026-08-09(04時)",
+        "percentage": 0.34,
+        "volumn": "5.00",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir17",
         "baseAvailable": "1480.05"
     },
@@ -105,7 +105,7 @@
         "daliyOverflow": "427.20",
         "percentage": 78.5,
         "volumn": "35329.00",
-        "updateAt": "2026-08-09(04時)",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir14",
         "baseAvailable": "45004.00"
     },
@@ -127,7 +127,7 @@
         "daliyOverflow": "160.80",
         "percentage": 73.87,
         "volumn": "1797.66",
-        "updateAt": "2026-08-09(04時)",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir10",
         "baseAvailable": "2433.42"
     },
@@ -147,9 +147,9 @@
         "daliyNetflow": 213.41,
         "daliyInflow": "294.64",
         "daliyOverflow": "508.05",
-        "percentage": 96.46,
-        "volumn": "19799.94",
-        "updateAt": "2026-08-09(04時)",
+        "percentage": 96.63,
+        "volumn": "19834.07",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir2",
         "baseAvailable": "20526.00"
     },
@@ -171,7 +171,7 @@
         "daliyOverflow": "180.07",
         "percentage": 90.64,
         "volumn": "16455.38",
-        "updateAt": "2026-08-09(04時)",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir7",
         "baseAvailable": "18154.94"
     },
@@ -180,9 +180,9 @@
         "daliyNetflow": 34.74,
         "daliyInflow": "121.96",
         "daliyOverflow": "156.70",
-        "percentage": 70.67,
-        "volumn": "26144.48",
-        "updateAt": "2026-08-09(04時)",
+        "percentage": 70.69,
+        "volumn": "26152.35",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir1",
         "baseAvailable": "36997.60"
     },
@@ -193,7 +193,7 @@
         "daliyOverflow": "151.69",
         "percentage": 100.0,
         "volumn": "11583.91",
-        "updateAt": "2026-08-09(04時)",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir6",
         "baseAvailable": "11548.60"
     },
@@ -204,7 +204,7 @@
         "daliyOverflow": "377.91",
         "percentage": 91.0,
         "volumn": "11690.11",
-        "updateAt": "2026-08-09(04時)",
+        "updateAt": "2026-08-09(05時)",
         "id": "reservoir9",
         "baseAvailable": "12846.14"
     },
@@ -226,7 +226,7 @@
         "daliyOverflow": "39.60",
         "baseAvailable": "5041.00",
         "daliyNetflow": 2.1,
-        "updateAt": "2026-08-09(04時)",
+        "updateAt": "2026-08-09(05時)",
         "volumn": "5047.22",
         "percentage": 100.0
     }
