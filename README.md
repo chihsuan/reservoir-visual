@@ -1,10 +1,12 @@
+
+
 # reservoir-visual
 
 Taiwan reservoir water level visualization.
 
 ## Data Update
 
-Reservoir data is updated daily via a GitHub Actions workflow that scrapes the latest data from the government website using [TaiwanReservoirAPI](https://github.com/chihsuan/TaiwanReservoirAPI).
+Reservoir data is updated hourly via a GitHub Actions workflow that scrapes the latest data from the government website using [TaiwanReservoirAPI](https://github.com/chihsuan/TaiwanReservoirAPI).
 
 To update manually:
 
